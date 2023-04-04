@@ -7,25 +7,26 @@ import java.util.ArrayList;
 public class Ingredient {
 
     //Data
-    public static ArrayList<String> ingredientsList;
+    public static String name;
 
     //Constructor
 
     /**
-     * This constructor
+     * This constructor creates an ingredient with a name. In the future it is possible
+     * to include other identifying features such as allergens. Most likely, the Ingredient
+     * Object would have the same name as the ingredient.
      */
-    public Ingredient() {
-        ingredientsList = new ArrayList<>();
+    public Ingredient(String name) {
+        this.name = name;
     }
     //Methods
 
     /**
-     * Returns the ArrayList that contains all ingredients
-     * are stored as Strings
-     * @return - the ArrayList of ingredients
+     * Returns the name of the ingredient. getIngredient() made more sense than toString()
+     * because a possible extension would be to add more data to a class
      */
-    public static ArrayList<String> getIngredients() {
-        return ingredientsList;
+    public static String getIngredient() {
+        return name;
     }
 
 }
