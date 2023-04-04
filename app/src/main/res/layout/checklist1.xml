@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#eeffd1">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Food Checklist"
+        android:textSize="24sp"
+        android:gravity="center"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <Spinner
+            android:id="@+id/spinner_vegetables"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:prompt="@string/vegetables"
+            android:spinnerMode="dropdown"/>
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Corn 🌽"
+            android:id="@+id/corn"/>
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Broccoli 🥦"
+            android:id="@+id/broccoli"/>
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Brussel Sprouts 🥬"
+            android:id="@+id/brussel_sprouts"/>
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Carrots 🥕"
+            android:id="@+id/carrots"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <Spinner
+            android:id="@+id/spinner_fruits"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:prompt="@string/fruits"
+            android:spinnerMode="dropdown"/>
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Apples 🍎"
+            android:id="@+id/apples"/>
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bananas 🍌"
+            android:id="@+id/bananas"/>
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Oranges 🍊"
+            android:id="@+id/oranges"/>
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Grapes 🍇"
+            android:id="@+id/grapes"/>
+
+    </LinearLayout>
+
+</LinearLayout>
