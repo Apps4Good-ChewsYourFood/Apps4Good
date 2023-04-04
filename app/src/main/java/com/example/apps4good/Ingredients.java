@@ -4,11 +4,11 @@ import java.util.ArrayList;
 public class Ingredients {
 
     //Data
-    public static ArrayList<String> ingredientsList;
+    public static ArrayList<String> ingredientList;
 
     //Constructor
     public Ingredients() {
-        ingredientsList = new ArrayList<>();
+        ingredientList = new ArrayList<>();
     }
     //Methods
     /*
@@ -18,7 +18,7 @@ public class Ingredients {
      */
 
     public static ArrayList<String> getIngredients() {
-        return ingredientsList;
+        return ingredientList;
     }
 
 }
