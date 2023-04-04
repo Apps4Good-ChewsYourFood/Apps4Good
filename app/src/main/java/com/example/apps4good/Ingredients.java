@@ -5,12 +5,10 @@ public class Ingredients {
 
     //Data
     public static ArrayList<String> ingredientsList;
-    public String name;
 
     //Constructor
-    public Ingredients(String name) {
+    public Ingredients() {
         ingredientsList = new ArrayList<>();
-        this.name = name;
     }
     //Methods
     /*
