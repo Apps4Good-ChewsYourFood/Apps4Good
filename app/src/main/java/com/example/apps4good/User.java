@@ -5,7 +5,7 @@ public class User {
     //Data
     private boolean seen;
     public boolean like;
-    public Ingredients ingredient;
+    public Ingredient ingredient;
 
     //Constructor
 
