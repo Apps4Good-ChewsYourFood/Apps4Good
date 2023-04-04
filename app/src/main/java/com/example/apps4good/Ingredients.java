@@ -4,11 +4,23 @@ import java.util.ArrayList;
 public class Ingredients {
 
     //Data
-    private ArrayList<String> ingredientsList;
+    public static ArrayList<String> ingredientsList;
+    public String name;
 
     //Constructor
-    public Ingredients(String name, String instructions) {
+    public Ingredients(String name) {
         ingredientsList = new ArrayList<>();
+        this.name = name;
     }
     //Methods
+    /*
+    public void addIngredient(String ingredient) {
+        ingredientsList.add(ingredient);
+    }
+     */
+
+    public static ArrayList<String> getIngredients() {
+        return ingredientsList;
+    }
+
 }
