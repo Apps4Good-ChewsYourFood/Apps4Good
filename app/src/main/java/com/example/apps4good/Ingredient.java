@@ -7,7 +7,9 @@ package com.example.apps4good;
 public class Ingredient {
 
     //Data
+
     private String name;
+
 
     //Constructor
 
@@ -25,6 +27,7 @@ public class Ingredient {
      * Returns the name of the ingredient. getIngredient() made more sense than toString()
      * because a possible extension would be to add more data to a class
      */
+     
     public String getIngredient() {
         return name;
     }

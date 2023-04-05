@@ -1,7 +1,5 @@
 package com.example.apps4good;
-
 import java.util.HashMap;
-
 /**
  * This class creates a user for our app, Chews Your Food and contains the necessary actions the
  * user needs for the app.
@@ -43,8 +41,25 @@ public class User {
      * Gets the list of preferences the user has made so far
      * @return - the HashMap formatted into a String. The HashMap is formatted with a for each loop
      */
+
     public HashMap<Ingredient, Boolean> getPreferences() {
         return preferences;
+        
+    @Override
+    public String toString() {
+        String text = "";
+        /*https://stackoverflow.com/questions/5920135/printing-hashmap-in-java helped me figure
+        how to get both the key and the value while iterating over the HashMap
+         */
+        for (Object name: preferences.keySet()) {
+            String key = name.toString();
+            String value = preferences.get(name).toString();
+            text += "Ingredient: " + key + "You like to eat this ingredient: " + value;
+        }
+        if (text.isEmpty())
+            return "You have not made any choices yet :(";
+        else
+            return text;
     }
 
 }
