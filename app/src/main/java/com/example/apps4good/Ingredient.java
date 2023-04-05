@@ -1,5 +1,5 @@
 package com.example.apps4good;
-import java.util.ArrayList;
+//import java.util.ArrayList;
 
 /**
  * This class stores an ingredient as an individual object
@@ -7,7 +7,7 @@ import java.util.ArrayList;
 public class Ingredient {
 
     //Data
-    public static String name;
+    private String name;
 
     //Constructor
 
@@ -25,7 +25,7 @@ public class Ingredient {
      * Returns the name of the ingredient. getIngredient() made more sense than toString()
      * because a possible extension would be to add more data to a class
      */
-    public static String getIngredient() {
+    public String getIngredient() {
         return name;
     }
 
