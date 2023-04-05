@@ -3,6 +3,9 @@ import java.util.HashMap;
 /**
  * This class creates a user for our app, Chews Your Food and contains the necessary actions the
  * user needs for the app.
+ *
+ *  @author shulinglin
+ *
  */
 public class User {
 
@@ -45,17 +48,17 @@ public class User {
     public HashMap<Ingredient, Boolean> getPreferences() {
         return preferences;
     }
-        
+
     @Override
     public String toString() {
         String text = "";
         /*https://stackoverflow.com/questions/5920135/printing-hashmap-in-java helped me figure
         how to get both the key and the value while iterating over the HashMap
          */
-        for (Object name: preferences.keySet()) {
-            String key = name.toString();
+        for (Ingredient name: preferences.keySet()) {
+            String key = name.getIngredient();
             String value = preferences.get(name).toString();
-            text += "Ingredient: " + key + "You like to eat this ingredient: " + value;
+            text += "Ingredient: " + key + "-- You like to eat this ingredient: " + value + " \n" ;
         }
         if (text.isEmpty())
             return "You have not made any choices yet :(";

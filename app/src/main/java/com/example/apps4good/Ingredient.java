@@ -3,6 +3,9 @@ package com.example.apps4good;
 
 /**
  * This class stores an ingredient as an individual object
+ *
+ * @author shulinglin
+ *
  */
 public class Ingredient {
 

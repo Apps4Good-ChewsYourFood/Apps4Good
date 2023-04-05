@@ -6,7 +6,7 @@ import java.util.ArrayList;
  * This Recipe object is capable of storing Ingredients that are used in a
  * certain recipe in an ArrayList and instructions on how to make the Recipe
  *
- * @author 13512
+ * @author Venkat
  *
  */
 public class Recipe {
