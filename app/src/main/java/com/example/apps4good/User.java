@@ -42,7 +42,8 @@ public class User {
      * Gets the list of preferences the user has made so far
      * @return - the HashMap formatted into a String. The HashMap is formatted with a for each loop
      */
-    public String getPreferences() {
+    @Override
+    public String toString() {
         String text = "";
         /*https://stackoverflow.com/questions/5920135/printing-hashmap-in-java helped me figure
         how to get both the key and the value while iterating over the HashMap
