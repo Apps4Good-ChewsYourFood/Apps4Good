@@ -44,6 +44,7 @@ public class User {
 
     public HashMap<Ingredient, Boolean> getPreferences() {
         return preferences;
+    }
         
     @Override
     public String toString() {
