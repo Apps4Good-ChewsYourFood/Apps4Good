@@ -47,8 +47,7 @@ public class User {
     /**
      * Gets the list of preferences the user has made so far
      *
-     * @return - the HashMap formatted into a String. The HashMap is formatted with
-     *         a for each loop
+     * @return - the HashMap of preferences
      */
 
 
