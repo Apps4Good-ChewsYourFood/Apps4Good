@@ -36,6 +36,15 @@ public class Ingredient {
     }
 
     /**
+     * Returns the name of the Ingredient
+     * @return - the name of the ingredient
+     */
+    @Override
+    public String toString() {
+        return name;
+    }
+
+    /*
      * Checks if two Ingredients are the same
      *
      * @param check - the Ingredient the method is comparing this Ingredient to
@@ -49,3 +58,4 @@ public class Ingredient {
     }
 
 }
+

@@ -11,6 +11,7 @@ import java.util.ArrayList;
  */
 public class Recipe {
     // Data
+    private String name;
     private String instructions;
     private ArrayList<Ingredient> ingredients;
 
@@ -23,13 +24,19 @@ public class Recipe {
         this.ingredients = new ArrayList<Ingredient>();
     }
 
+    public Recipe(String name) {
+        this.name = name;
+        this.ingredients = new ArrayList<Ingredient>();
+    }
+
     /**
      * Constructor. Constructs a Recipe object with a specified instructions and
      * creates an ArrayList to store Ingredient objects
      *
      * @param instructions - the instructions for the recipe
      */
-    public Recipe(String instructions) {
+    public Recipe(String name, String instructions) {
+        this.name = name;
         this.ingredients = new ArrayList<Ingredient>();
         this.instructions = instructions;
     }
@@ -86,7 +93,38 @@ public class Recipe {
      * @param - an ArrayList of Ingredients to set as the ingredients of the receipe
      */
     public void setIngredients(ArrayList<Ingredient> ingredients) {
-        this.ingredients = ingredients;
+		this.ingredients = ingredients;
+    }
+     
+     /*
+     * Gets the Ingredient at the specified index
+     *
+     * @param index - the index of Ingredient in the ingredients ArrayList
+     * @return the Ingredient specified by the index
+     */
+    public Ingredient getIngredient(int index) {
+        return ingredients.get(index);
     }
 
+    /** 
+     * Gets the name of the Recipe
+     *
+     * @return the name of the Recipe
+     */
+    public String getName() {
+        return name;
+    }
+
+    /**
+     * @return the name of the Recipe object and the Ingredients for that recipe
+     */
+    @Override
+    public String toString() {
+        String output = name + ": ";
+        for(int i = 0; i < ingredients.size(); i ++) {
+            output += ingredients.get(i) + ", ";
+        }
+        output = output.substring(0, output.length() - 2);
+        return output;
+    }
 }

@@ -50,6 +50,7 @@ public class User {
      * @return - the HashMap of preferences
      */
 
+
     public HashMap<Ingredient, Boolean> getPreferences() {
         return preferences;
     }
@@ -74,3 +75,4 @@ public class User {
     }
 
 }
+
