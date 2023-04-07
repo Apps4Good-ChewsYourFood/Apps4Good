@@ -6,7 +6,7 @@ import java.util.ArrayList;
  * This Recipe object is capable of storing Ingredients that are used in a
  * certain recipe in an ArrayList and instructions on how to make the Recipe
  *
- * @author 13512
+ * @author Venkat
  *
  */
 public class Recipe {
@@ -29,7 +29,7 @@ public class Recipe {
     }
 
     /**
-     * Constructor. Constructs a Recipe object with a specified
+     * Constructor. Constructs a Recipe object with a specified instructions
      */
     public Recipe(String name, String instructions) {
         this.name = name;
@@ -77,7 +77,7 @@ public class Recipe {
         return ingredients.get(index);
     }
 
-    /**
+    /** 
      *
      * @return the name of the Recipe
      */
@@ -85,6 +85,9 @@ public class Recipe {
         return name;
     }
 
+    /**
+     * @return the name of the Recipe object and the Ingredients for that recipe
+     */
     @Override
     public String toString() {
         String output = name + ": ";
