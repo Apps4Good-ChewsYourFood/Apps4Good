@@ -23,12 +23,6 @@ public class Ingredient {
     public Ingredient(String name) {
         this.name = name;
     }
-    //Methods
-
-
-//    public String getIngredient() {
-//        return name;
-//    }
 
     /**
      * Returns the name of the ingredient a possible extension would be to add
@@ -41,6 +35,15 @@ public class Ingredient {
     }
 
     /**
+     * Returns the name of the Ingredient
+     * @return - the name of the ingredient
+     */
+    @Override
+    public String toString() {
+        return name;
+    }
+
+
      * Checks if two Ingredients are the same
      * @param check - the Ingredient the method is comparing this Ingredient to
      * @return - true if the Ingredient objects are the same; false if the objects are different
@@ -52,3 +55,4 @@ public class Ingredient {
     }
 
 }
+
