@@ -66,7 +66,7 @@ public class User {
         for (Ingredient name : preferences.keySet()) {
             String key = name.toString();
             String value = preferences.get(name).toString();
-            text += "Ingredient: " + key + "-- You like to eat this ingredient: " + value + " \n";
+            text += "\nIngredient: " + key + "-- You like to eat this ingredient: " + value;
         }
         if (text.isEmpty())
             return "You have not made any choices yet :(";
