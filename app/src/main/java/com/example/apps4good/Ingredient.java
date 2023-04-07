@@ -24,14 +24,13 @@ public class Ingredient {
     }
 
   /**
-	 * Returns the name of the ingredient a possible extension would be to add more
-	 * data to the ingredient class. Then we would have to decide if the toString()
-	 * includes this data.
-	 *
-	 * @return - the name of the ingredient
-	 */
-	@Override
-	public String toString() {
+   * Returns the name of the ingredient a possible extension would be to add more
+   * data to the ingredient class. Then we would have to decide if the toString()
+   * includes this data.
+   *
+   * @return - the name of the ingredient
+   */
+	@Overridepublic String toString() {
 		return name;
 	}
 
