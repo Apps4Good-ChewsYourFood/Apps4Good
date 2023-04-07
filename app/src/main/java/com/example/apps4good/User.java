@@ -51,6 +51,7 @@ public class User {
      *         a for each loop
      */
 
+
     public HashMap<Ingredient, Boolean> getPreferences() {
         return preferences;
     }
@@ -75,3 +76,4 @@ public class User {
     }
 
 }
+
