@@ -8,11 +8,11 @@ package com.example.apps4good;
  */
 public class Ingredient {
 
-    // Data
+ // Data
 
-    private String name;
+ private String name;
 
-    // Constructor
+ // Constructor
 
     /**
      * This constructor creates an ingredient with a name. In the future it is
@@ -30,7 +30,8 @@ public class Ingredient {
    *
    * @return - the name of the ingredient
    */
-	@Overridepublic String toString() {
+	@Override
+	public String toString() {
 		return name;
 	}
 
