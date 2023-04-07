@@ -23,7 +23,7 @@ public class Recipe {
     }
 
     /**
-     * Constructor. Constructs a Recipe object with a specified
+     * Constructor. Constructs a Recipe object with a specified instructions
      */
     public Recipe(String instructions) {
         this.ingredients = new ArrayList<Ingredient>();
