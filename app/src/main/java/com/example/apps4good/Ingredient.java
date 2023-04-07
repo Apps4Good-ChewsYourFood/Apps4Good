@@ -43,7 +43,7 @@ public class Ingredient {
         return name;
     }
 
-
+    /*
      * Checks if two Ingredients are the same
      * @param check - the Ingredient the method is comparing this Ingredient to
      * @return - true if the Ingredient objects are the same; false if the objects are different
