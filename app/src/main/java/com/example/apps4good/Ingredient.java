@@ -1,5 +1,5 @@
 package com.example.apps4good;
-//import java.util.ArrayList;
+import java.util.ArrayList;
 
 /**
  * This class stores an ingredient as an individual object
@@ -32,4 +32,15 @@ public class Ingredient {
         return name;
     }
 
+    /**
+     * Returns the name of the Ingredient
+     */
+    @Override
+    public String toString() {
+        return name;
+    }
+
+    public boolean equals(Ingredient i) {
+        return name.equals(i.name);
+    }
 }

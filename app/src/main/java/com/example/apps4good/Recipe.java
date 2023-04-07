@@ -11,6 +11,7 @@ import java.util.ArrayList;
  */
 public class Recipe {
     // Data
+    private String name;
     private String instructions;
     private ArrayList<Ingredient> ingredients;
 
@@ -22,10 +23,16 @@ public class Recipe {
         this.ingredients = new ArrayList<Ingredient>();
     }
 
+    public Recipe(String name) {
+        this.name = name;
+        this.ingredients = new ArrayList<Ingredient>();
+    }
+
     /**
      * Constructor. Constructs a Recipe object with a specified
      */
-    public Recipe(String instructions) {
+    public Recipe(String name, String instructions) {
+        this.name = name;
         this.ingredients = new ArrayList<Ingredient>();
         this.instructions = instructions;
     }
@@ -55,13 +62,6 @@ public class Recipe {
     }
 
     /**
-     * @param instructions the instructions to set
-     */
-    public void setInstructions(String instructions) {
-        this.instructions = instructions;
-    }
-
-    /**
      * @return the ingredients
      */
     public ArrayList<Ingredient> getIngredients() {
@@ -69,10 +69,29 @@ public class Recipe {
     }
 
     /**
-     * @param ingredients the ingredients to set
+     *
+     * @param index
+     * @return the Ingredient specified by the index
      */
-    public void setIngredients(ArrayList<Ingredient> ingredients) {
-        this.ingredients = ingredients;
+    public Ingredient getIngredient(int index) {
+        return ingredients.get(index);
     }
 
+    /**
+     *
+     * @return the name of the Recipe
+     */
+    public String getName() {
+        return name;
+    }
+
+    @Override
+    public String toString() {
+        String output = name + ": ";
+        for(int i = 0; i < ingredients.size(); i ++) {
+            output += ingredients.get(i) + ", ";
+        }
+        output = output.substring(0, output.length() - 2);
+        return output;
+    }
 }
