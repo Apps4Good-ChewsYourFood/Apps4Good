@@ -22,6 +22,7 @@ public class Ingredient {
     public Ingredient(String name) {
         this.name = name;
     }
+    // Methods
 
   /**
    * Returns the name of the ingredient a possible extension would be to add more
@@ -37,15 +38,16 @@ public class Ingredient {
 
 	/**
 	 * Checks if two Ingredients are the same
-	 * 
+	 *
 	 * @param check - the Ingredient the method is comparing this Ingredient to
 	 * @return - true if the Ingredient objects are the same; false if the objects
-	 *         are different
+	 *         are different (including if the parameter is null)
 	 */
 	public boolean equals(Ingredient check) {
-		if (name.equals(check.toString()))
-			return true;
-		return false;
+        if(check == null) {
+            return false;
+        }
+        return name.equals(check.name);
 	}
 
 }

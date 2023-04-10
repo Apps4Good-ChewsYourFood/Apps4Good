@@ -24,16 +24,20 @@ public class Recipe {
         this.ingredients = new ArrayList<Ingredient>();
     }
 
+    /**
+     * Constructs a recipe object with a name
+     * @param name the name of the recipe
+     */
     public Recipe(String name) {
         this.name = name;
         this.ingredients = new ArrayList<Ingredient>();
     }
 
     /**
-     * Constructor. Constructs a Recipe object with a specified instructions and
+     * Constructor. Constructs a Recipe object with a specified name and instructions
      * creates an ArrayList to store Ingredient objects
-     *
-     * @param instructions - the instructions for the recipe
+     * @param name the name of the recipe
+     * @param instructions instructions on how to make the recipe
      */
     public Recipe(String name, String instructions) {
         this.name = name;
@@ -49,6 +53,19 @@ public class Recipe {
      */
     public void addIngredient(Ingredient i) {
         ingredients.add(i);
+    }
+
+    /**
+     * Adds each ingredient (separated with a specified delimiter) to
+     * the Recipe
+     * @param input with the names of ingredients separated by the delimiter
+     * @param delimiter the String used to split the ingredients
+     */
+    public void addIngredients(String input, String delimiter) {
+        String[] stringredients = input.split(delimiter);
+        for (String str : stringredients) {
+            ingredients.add(new Ingredient(str));
+        }
     }
 
     /**
@@ -95,7 +112,7 @@ public class Recipe {
     public void setIngredients(ArrayList<Ingredient> ingredients) {
 		this.ingredients = ingredients;
     }
-     
+
      /*
      * Gets the Ingredient at the specified index
      *
@@ -106,7 +123,7 @@ public class Recipe {
         return ingredients.get(index);
     }
 
-    /** 
+    /**
      * Gets the name of the Recipe
      *
      * @return the name of the Recipe
@@ -121,7 +138,7 @@ public class Recipe {
     @Override
     public String toString() {
         String output = name + ": ";
-        for(int i = 0; i < ingredients.size(); i ++) {
+        for (int i = 0; i < ingredients.size(); i++) {
             output += ingredients.get(i) + ", ";
         }
         output = output.substring(0, output.length() - 2);
