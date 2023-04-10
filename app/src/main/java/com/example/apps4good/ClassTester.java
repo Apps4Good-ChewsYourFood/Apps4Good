@@ -3,7 +3,7 @@ package com.example.apps4good;
 public class ClassTester {
 
     /* This is the code I used to test our classes in eclipse. As far as I know this cannot be ran
-    in Andriod Studio
+    in Android Studio
      */
 
     public static void main(String[] args) {
