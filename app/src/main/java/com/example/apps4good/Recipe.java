@@ -17,7 +17,8 @@ public class Recipe {
 
     // Constructor
     /**
-     * Default constructor. Constructs a Recipe object
+     * Default constructor. Constructs a Recipe object and creates an ArrayList to
+     * store Ingredient objects
      */
     public Recipe() {
         this.ingredients = new ArrayList<Ingredient>();
@@ -34,6 +35,7 @@ public class Recipe {
 
     /**
      * Constructor. Constructs a Recipe object with a specified name and instructions
+     * creates an ArrayList to store Ingredient objects
      * @param name the name of the recipe
      * @param instructions instructions on how to make the recipe
      */
@@ -46,6 +48,8 @@ public class Recipe {
 
     /**
      * Adds the given ingredient to the ingredients ArrayList
+     *
+     * @param i - the Ingredient object that is being added to the ArrayList
      */
     public void addIngredient(Ingredient i) {
         ingredients.add(i);
@@ -74,24 +78,45 @@ public class Recipe {
     }
 
     /**
-     * Returns the instructions as one string
-     * @return the instructions
+     * Gets the instructions for the recipe
+     *
+     * @return - the instructions for the recipe
      */
     public String getInstructions() {
         return instructions;
     }
 
     /**
-     * Returns the ArrayList of Ingredient
-     * @return the ingredients
+     * Sets the instructions for the recipe
+     *
+     * @param instructions - the instructions to set
+     */
+    public void setInstructions(String instructions) {
+        this.instructions = instructions;
+    }
+
+    /**
+     * Gets the ingredients of the recipe
+     *
+     * @return the ingredients as Ingredient objects
      */
     public ArrayList<Ingredient> getIngredients() {
         return ingredients;
     }
 
     /**
-     * Gets the Ingredient specified by the index
-     * @param index the index to fetch the ingredient from
+     * Sets the ingredients ArrayList to the given input
+     *
+     * @param - an ArrayList of Ingredients to set as the ingredients of the receipe
+     */
+    public void setIngredients(ArrayList<Ingredient> ingredients) {
+		this.ingredients = ingredients;
+    }
+
+     /*
+     * Gets the Ingredient at the specified index
+     *
+     * @param index - the index of Ingredient in the ingredients ArrayList
      * @return the Ingredient specified by the index
      */
     public Ingredient getIngredient(int index) {
@@ -99,6 +124,7 @@ public class Recipe {
     }
 
     /**
+     * Gets the name of the Recipe
      *
      * @return the name of the Recipe
      */
@@ -107,7 +133,7 @@ public class Recipe {
     }
 
     /**
-     * Changes the recipe to a string
+     * @return the name of the Recipe object and the Ingredients for that recipe
      */
     @Override
     public String toString() {

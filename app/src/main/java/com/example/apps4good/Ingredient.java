@@ -2,13 +2,19 @@ package com.example.apps4good;
 
 /**
  * This class stores an ingredient as an individual object
+ *
+ * @author shulinglin
+ *
  */
 public class Ingredient {
 
     // Data
     private String name;
+ // Data
 
-    // Constructor
+ private String name;
+
+ // Constructor
 
     /**
      * This constructor creates an ingredient with a name. In the future it is
@@ -20,26 +26,30 @@ public class Ingredient {
     }
     // Methods
 
-    /**
-     * Returns the name of the ingredient. getIngredient() made more sense than
-     * toString() because a possible extension would be to add more data to a class
-     */
-    public String getIngredient() {
-        return name;
-    }
+  /**
+   * Returns the name of the ingredient a possible extension would be to add more
+   * data to the ingredient class. Then we would have to decide if the toString()
+   * includes this data.
+   *
+   * @return - the name of the ingredient
+   */
+	@Override
+	public String toString() {
+		return name;
+	}
 
-    /**
-     * Returns the name of the Ingredient
-     */
-    @Override
-    public String toString() {
-        return name;
-    }
-
-    public boolean equals(Ingredient i) {
+	/**
+	 * Checks if two Ingredients are the same
+	 *
+	 * @param check - the Ingredient the method is comparing this Ingredient to
+	 * @return - true if the Ingredient objects are the same; false if the objects
+	 *         are different (including if the parameter is null)
+	 */
+	public boolean equals(Ingredient check) {
         if(i == null) {
             return false;
         }
         return name.equals(i.name);
-    }
+	}
+
 }
