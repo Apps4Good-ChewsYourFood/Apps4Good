@@ -44,10 +44,10 @@ public class Ingredient {
 	 *         are different (including if the parameter is null)
 	 */
 	public boolean equals(Ingredient check) {
-        if(i == null) {
+        if(check == null) {
             return false;
         }
-        return name.equals(i.name);
+        return name.equals(check.name);
 	}
 
 }
