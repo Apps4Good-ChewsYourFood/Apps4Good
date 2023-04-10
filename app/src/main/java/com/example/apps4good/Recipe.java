@@ -23,13 +23,19 @@ public class Recipe {
         this.ingredients = new ArrayList<Ingredient>();
     }
 
+    /**
+     * Constructs a recipe object with a name
+     * @param name the name of the recipe
+     */
     public Recipe(String name) {
         this.name = name;
         this.ingredients = new ArrayList<Ingredient>();
     }
 
     /**
-     * Constructor. Constructs a Recipe object with a specified instructions
+     * Constructor. Constructs a Recipe object with a specified name and instructions
+     * @param name the name of the recipe
+     * @param instructions instructions on how to make the recipe
      */
     public Recipe(String name, String instructions) {
         this.name = name;
@@ -46,6 +52,19 @@ public class Recipe {
     }
 
     /**
+     * Adds each ingredient (separated with a specified delimiter) to
+     * the Recipe
+     * @param input with the names of ingredients separated by the delimiter
+     * @param delimiter the String used to split the ingredients
+     */
+    public void addIngredients(String input, String delimiter) {
+        String[] stringredients = input.split(delimiter);
+        for (String str : stringredients) {
+            ingredients.add(new Ingredient(str));
+        }
+    }
+
+    /**
      * Removes the last added ingredient from the recipe
      *
      * @return the removed Ingredient
@@ -55,6 +74,7 @@ public class Recipe {
     }
 
     /**
+     * Returns the instructions as one string
      * @return the instructions
      */
     public String getInstructions() {
@@ -62,6 +82,7 @@ public class Recipe {
     }
 
     /**
+     * Returns the ArrayList of Ingredient
      * @return the ingredients
      */
     public ArrayList<Ingredient> getIngredients() {
@@ -69,15 +90,15 @@ public class Recipe {
     }
 
     /**
-     *
-     * @param index
+     * Gets the Ingredient specified by the index
+     * @param index the index to fetch the ingredient from
      * @return the Ingredient specified by the index
      */
     public Ingredient getIngredient(int index) {
         return ingredients.get(index);
     }
 
-    /** 
+    /**
      *
      * @return the name of the Recipe
      */
@@ -86,12 +107,12 @@ public class Recipe {
     }
 
     /**
-     * @return the name of the Recipe object and the Ingredients for that recipe
+     * Changes the recipe to a string
      */
     @Override
     public String toString() {
         String output = name + ": ";
-        for(int i = 0; i < ingredients.size(); i ++) {
+        for (int i = 0; i < ingredients.size(); i++) {
             output += ingredients.get(i) + ", ";
         }
         output = output.substring(0, output.length() - 2);

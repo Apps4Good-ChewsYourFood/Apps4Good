@@ -1,12 +1,10 @@
 package com.example.apps4good;
+
 import java.util.HashMap;
 
 /**
  * This class creates a user for our app, Chews Your Food and contains the
  * necessary actions the user needs for the app.
- *
- * @author shulinglin
- *
  */
 public class User {
 
@@ -50,13 +48,6 @@ public class User {
      * @return - the HashMap formatted into a String. The HashMap is formatted with
      *         a for each loop
      */
-
-
-    public HashMap<Ingredient, Boolean> getPreferences() {
-        return preferences;
-    }
-
-    @Override
     public String toString() {
         String text = "";
         /*
@@ -64,16 +55,25 @@ public class User {
          * me figure how to get both the key and the value while iterating over the
          * HashMap
          */
-        for (Ingredient name : preferences.keySet()) {
+        for (Object name : preferences.keySet()) {
             String key = name.toString();
             String value = preferences.get(name).toString();
-            text += "\nIngredient: " + key + "-- You like to eat this ingredient: " + value;
-        }
+            text += "Ingredient: " + key + " You like to eat this ingredient: " + value + "\n";}
         if (text.isEmpty())
             return "You have not made any choices yet :(";
         else
             return text;
     }
 
-}
+    /**
+     * Gets a the HashMap containing the User's preferences base. True corresponds
+     * to the user liking the ingredient, and false corresponds to the user
+     * disliking the ingredient.
+     *
+     * @return user's preferences
+     */
+    public HashMap<Ingredient, Boolean> getPreferences() {
+        return preferences;
+    }
 
+}
