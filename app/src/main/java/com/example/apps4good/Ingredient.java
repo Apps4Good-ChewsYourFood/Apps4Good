@@ -8,8 +8,6 @@ package com.example.apps4good;
  */
 public class Ingredient {
 
-    // Data
-    private String name;
  // Data
 
  private String name;
