@@ -1,0 +1,8 @@
+<resources>
+    <string-array name="vegetables_array">
+        <item>Corn</item>
+        <item>Broccoli</item>
+        <item>Brussel Sprouts</item>
+        <item>Carrots</item>
+    </string-array>
+</resources>
