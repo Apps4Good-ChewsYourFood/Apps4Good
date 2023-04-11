@@ -2,10 +2,7 @@ package com.example.apps4good;
 
 public class ClassTester {
 
-    /* This is the code I used to test our classes in eclipse. As far as I know this cannot be ran
-    in Android Studio
-     */
-
+    // This is the code I used to test our classes in eclipse
     public static void main(String[] args) {
         Ingredient salmon = new Ingredient("salmon");
         Ingredient broccoli = new Ingredient("broccoli");
@@ -19,12 +16,12 @@ public class ClassTester {
         McShukat.addPreference(broccoli, false);
         McShukat.addPreference(marshmallow, false);
         McShukat.addPreference(salmon, true);
-        System.out.println("McShukat's preferences" + McShukat.toString());
+        System.out.println("McShukat's preferences:" + McShukat.toString());
 
         Recipe ew = new Recipe();
         ew.addIngredient(vanilla);
         ew.addIngredient(water);
-        System.out.println("The ingredients in the ew recipe" + ew.getIngredients().toString());
+        System.out.println("The ingredients in the ew recipe " + ew.getIngredients().toString());
 
         System.out.println("Is salmon the same as water? " + salmon.equals(water));
 

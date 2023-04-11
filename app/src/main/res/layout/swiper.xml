@@ -4,6 +4,7 @@
     android:layout_height="match_parent"
     android:background="#eeffd1">
 
+
     <!-- Bottom bar -->
     <LinearLayout
         android:id="@+id/bottom_bar"
@@ -44,7 +45,4 @@
     </LinearLayout>
 
 </RelativeLayout>
-
-
-
 
