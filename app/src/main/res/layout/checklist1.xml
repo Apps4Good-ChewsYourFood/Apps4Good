@@ -412,6 +412,6 @@
                 android:id="@+id/cake"/>
 
         </LinearLayout>
-
-
+    </ScrollView>
+</LinearLayout>
 
