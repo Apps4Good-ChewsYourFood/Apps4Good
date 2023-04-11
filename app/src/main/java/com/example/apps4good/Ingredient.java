@@ -47,5 +47,3 @@ public class Ingredient {
 	}
 
 }
-
-//This is an example
