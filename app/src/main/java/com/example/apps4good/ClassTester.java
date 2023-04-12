@@ -1,6 +1,5 @@
 package com.example.apps4good;
 
-
 public class ClassTester {
 
     // This is the code I used to test our classes in eclipse
