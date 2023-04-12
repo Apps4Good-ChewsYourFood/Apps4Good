@@ -43,6 +43,3 @@
             android:text="❤️"
             android:textSize="30sp"/>
     </LinearLayout>
-
-</RelativeLayout>
-

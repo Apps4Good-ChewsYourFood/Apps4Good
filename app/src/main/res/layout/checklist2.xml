@@ -414,8 +414,8 @@
             android:layout_height="wrap_content"
             android:text="Cake 🍰"
             android:id="@+id/cake"/>
-
     </LinearLayout>
-
+    </ScrollView>
+</LinearLayout>
 
 
