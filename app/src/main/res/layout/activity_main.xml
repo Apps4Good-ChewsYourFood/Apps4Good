@@ -28,6 +28,7 @@
         android:background="@color/Denim"
         android:backgroundTint="#000000"
         android:fontFamily="serif"
+        android:onClick="startChecklist1"
         android:padding="16dp"
         android:radius="100dp"
         android:text="@string/button_home"
