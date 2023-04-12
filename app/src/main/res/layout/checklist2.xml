@@ -1,14 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#eeffd1">
 
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+
         android:text="Please Select Foods You Dislike"
         android:fontFamily="cursive"
         android:textColor="#4a7996"
@@ -20,6 +23,7 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
 
     <LinearLayout
     android:layout_width="match_parent"
@@ -34,12 +38,12 @@
         android:textColor="#000000"
         android:padding="10dp" />
 
-    <Spinner
-        android:id="@+id/fruits_spinner"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:prompt="@string/select_fruit"
-        android:spinnerMode="dropdown" />
+        <Spinner
+            android:id="@+id/fruits_spinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:prompt="@string/select_fruit"
+            android:spinnerMode="dropdown" />
 
         <CheckBox
             android:layout_width="wrap_content"

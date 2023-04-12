@@ -71,4 +71,10 @@
     <string name="cookie">Cookie 🍪</string>
     <string name="pasta">Pasta 🍝</string>
     <string name="cake">Cake 🍰</string>
+    <string name="select_dairy" />
+    <string name="select_meat" />
+    <string name="select_vegetable" />
+    <string name="select_fruit" />
+    <string name="select_fish" />
+    <string name="select_carbs" />
 </resources>

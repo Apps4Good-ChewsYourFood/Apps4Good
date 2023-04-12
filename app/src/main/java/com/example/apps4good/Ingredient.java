@@ -7,13 +7,10 @@ package com.example.apps4good;
  *
  */
 public class Ingredient {
+    // Data
+    private String name;
 
- // Data
-
- private String name;
-
- // Constructor
-
+ 	// Constructor
     /**
      * This constructor creates an ingredient with a name. In the future it is
      * possible to include other identifying features such as allergens. Most
@@ -23,14 +20,13 @@ public class Ingredient {
         this.name = name;
     }
     // Methods
-
-  /**
-   * Returns the name of the ingredient a possible extension would be to add more
-   * data to the ingredient class. Then we would have to decide if the toString()
-   * includes this data.
-   *
-   * @return - the name of the ingredient
-   */
+	/**
+  	* Returns the name of the ingredient a possible extension would be to add more
+  	 * data to the ingredient class. Then we would have to decide if the toString()
+  	 * includes this data.
+  	 *
+  	 * @return - the name of the ingredient
+	 */
 	@Override
 	public String toString() {
 		return name;
