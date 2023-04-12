@@ -1,5 +1,74 @@
 <resources>
     <string name="app_name">Apps4Good</string>
-    <string name="vegetables">Vegetables</string>
+    <string name="selectFoodsLike">Please Select Foods you Really Enjoy</string>
+    <string name="title_home">Welcome to Chews Your Food</string>
+    <string name="button_home">Continue</string>
+
+
+    <!-- Spinner prompts-->
+    <string name="select_fruit">Choose fruits</string>
+    <string name="select_vegetable">Choose vegetables</string>
+    <string name="select_meat">Select meat</string>
+    <string name="select_dairy">Select dairy products</string>
+    <string name="select_fish">Select fish</string>
+    <string name="select_carbs">Select carbs</string>
+
+    <!-- Names of categories-->
     <string name="fruits">Fruits</string>
+    <string name="meats">Meats</string>
+    <string name="dairy">Dairy</string>
+    <string name="carbohydrates">Carbs</string>
+    <string name="vegetables">Vegetables</string>
+    <string name="fish">Fish</string>
+
+    <!-- Names of all ingredients-->
+    <string name="apples">Apples 🍎</string>
+    <string name="bananas">Bananas 🍌</string>
+    <string name="oranges">Oranges 🍊</string>
+    <string name="grapes">Grapes 🍇</string>
+    <string name="mango">Mango 🥭</string>
+    <string name="melon">Melon 🍈</string>
+    <string name="kiwi">Kiwi 🥝</string>
+    <string name="corn">Corn 🌽</string>
+    <string name="broccoli">Broccoli 🥦</string>
+    <string name="brussel_sprouts">Brussel Sprouts 🥬</string>
+    <string name="carrots">Carrots 🥕</string>
+    <string name="avocado">Avocado 🥑</string>
+    <string name="eggplant">Eggplant 🍆</string>
+    <string name="tomato">Tomato 🍅</string>
+    <string name="mushroom">Mushroom 🍄</string>
+    <string name="pineapple">Pineapple 🍍</string>
+    <string name="beef">Beef 🥩</string>
+    <string name="chicken">Chicken 🍗</string>
+    <string name="pork">Pork 🥓</string>
+    <string name="goat">Goat 🍖</string>
+    <string name="lamb">Lamb 🍖</string>
+    <string name="horse">Horse 🥩</string>
+    <string name="veal">Veal 🍖</string>
+    <string name="eggs">Eggs 🥚</string>
+    <string name="milk">Milk 🥛</string>
+    <string name="iceCream">Ice Cream 🍨</string>
+    <string name="butter">Butter 🧈</string>
+    <string name="sourCream">Sour Cream 🥄</string>
+    <string name="cheese">Cheese 🧀</string>
+    <string name="yogurt">Yogurt 🍦</string>
+    <string name="cod">Cod 🐟</string>
+    <string name="tuna">Tuna 🎣</string>
+    <string name="salmon">Salmon 🐠</string>
+    <string name="sushi">Sushi 🍣</string>
+    <string name="octopus">Octopus 🐙</string>
+    <string name="shrimp">Shrimp 🍤</string>
+    <string name="crab">Crab 🦀</string>
+    <string name="clam">Clam 🐚</string>
+    <string name="mussel">Mussel 🐚</string>
+    <string name="lobster">Lobster 🦞</string>
+    <string name="oyster">Oyster 🦪</string>
+    <string name="wheatbread">Wheat Bread 🥖</string>
+    <string name="ryebread">Rye Bread 🌾</string>
+    <string name="whitebread">White Bread 🍞</string>
+    <string name="pizza">Pizza 🍕</string>
+    <string name="fries">Fries 🍟</string>
+    <string name="cookie">Cookie 🍪</string>
+    <string name="pasta">Pasta 🍝</string>
+    <string name="cake">Cake 🍰</string>
 </resources>
