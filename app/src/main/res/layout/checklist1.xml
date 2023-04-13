@@ -465,12 +465,14 @@
                 android:id="@+id/previousChecklist1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:onClick="startMainActivity"
                 android:text="@string/previous" />
 
             <Button
                 android:id="@+id/nextChecklist1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:onClick="startChecklist2"
                 android:text="@string/next" />
 
 
