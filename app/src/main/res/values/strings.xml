@@ -74,4 +74,9 @@
     <string name="cookie">Cookie 🍪</string>
     <string name="pasta">Pasta 🍝</string>
     <string name="cake">Cake 🍰</string>
+
+    <!-- Swiper XML Str-->
+    <string name="settingsButtonLabel">⚙️</string>
+    <string name="homeButtonLabel">🏠</string>
+    <string name="favoritesButtonLabel">❤️</string>
 </resources>
