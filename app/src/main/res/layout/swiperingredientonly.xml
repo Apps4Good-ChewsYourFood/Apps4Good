@@ -52,23 +52,18 @@
         android:layout_above="@+id/bottom_bar"
         android:layout_marginBottom="40dp" >
 
-        <ImageView
-            android:id="@+id/imageView2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            tools:srcCompat="@tools:sample/backgrounds/scenic" />
 
         <EditText
             android:id="@+id/editTextTextPersonName2"
             android:layout_width="match_parent"
-            android:layout_height="161dp"
+            android:layout_height="400dp"
             android:ems="10"
             android:fontFamily="cursive"
             android:gravity="center"
             android:inputType="textPersonName"
-            android:text="Recipe Name"
+            android:text="Ingredient"
             android:textColor="#4a7996"
-            android:textSize="50sp" />
+            android:textSize="90sp" />
 
         <Button
             android:id="@+id/button5"
@@ -90,7 +85,7 @@
             android:text="👎"
             android:textSize="20sp"
             android:backgroundTint="#d16a5c"
-           />
+            />
 
     </androidx.cardview.widget.CardView>
 
