@@ -45,11 +45,11 @@ public class Checklist1Activity extends AppCompatActivity {
 
         final SharedPreferences.Editor editor = sharedpreferences.edit();
 
-        if (sharedpreferences.getBoolean("apple", false)) {
+        if (sharedpreferences.getBoolean("apple", false) == true) {
             apple.setChecked(true);
         }
 
-        if (sharedpreferences.getBoolean("banana", false)) {
+        if (sharedpreferences.contains("bananas") && sharedpreferences.getBoolean("oranges",false) == true) {
             banana.setChecked(true);
         }
 
