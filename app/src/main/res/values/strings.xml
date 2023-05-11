@@ -7,15 +7,6 @@
     <string name="previous">PREVIOUS</string>
     <string name="next">NEXT</string>
 
-
-    <!-- Spinner prompts-->
-    <string name="select_fruit">Choose fruits</string>
-    <string name="select_vegetable">Choose vegetables</string>
-    <string name="select_meat">Select meat</string>
-    <string name="select_dairy">Select dairy products</string>
-    <string name="select_fish">Select fish</string>
-    <string name="select_carbs">Select carbs</string>
-
     <!-- Names of categories-->
     <string name="fruits">Fruits</string>
     <string name="meats">Meats</string>
@@ -35,6 +26,10 @@
     <string name="corn">Corn 🌽</string>
     <string name="broccoli">Broccoli 🥦</string>
     <string name="brussel_sprouts">Brussel Sprouts 🥬</string>
+    <string name="cucumber">Cucumber 🥒</string>
+    <string name="onion">Onion 🧅</string>
+    <string name="peas">Peas 🫛</string>
+    <string name="bellpepper">Bell Pepper 🫑</string>
     <string name="carrots">Carrots 🥕</string>
     <string name="avocado">Avocado 🥑</string>
     <string name="eggplant">Eggplant 🍆</string>
