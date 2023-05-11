@@ -12,7 +12,7 @@ import android.widget.CompoundButton;
 
 public class Checklist1Activity extends AppCompatActivity {
 
-    public static final String MyPREFERENCES = "MyPrefs" ;
+    public static final String checklist1Preferences = "checklist1Preferences" ;
 
     SharedPreferences sharedpreferences;
     @Override
@@ -20,35 +20,109 @@ public class Checklist1Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.checklist1);
 
-        CheckBox apple = (CheckBox) findViewById(R.id.apples);
-        CheckBox banana = (CheckBox) findViewById(R.id.bananas);
-        CheckBox oranges = (CheckBox) findViewById(R.id.oranges);
-        CheckBox grapes = (CheckBox) findViewById(R.id.grapes);
-        CheckBox mango = (CheckBox) findViewById(R.id.mango);
-        CheckBox melon = (CheckBox) findViewById(R.id.melon);
-        CheckBox pineapple = (CheckBox) findViewById(R.id.pineapple);
-        CheckBox Kiwi = (CheckBox) findViewById(R.id.kiwi);
-        CheckBox corn = (CheckBox) findViewById(R.id.corn);
-        CheckBox broccoli = (CheckBox) findViewById(R.id.broccoli);
-        CheckBox brussel = (CheckBox) findViewById(R.id.brussel_sprouts);
-        CheckBox carrots = (CheckBox) findViewById(R.id.carrots);
-        CheckBox avocado = (CheckBox) findViewById(R.id.avocado);
-        CheckBox eggplant = (CheckBox) findViewById(R.id.eggplant);
-        CheckBox tomato = (CheckBox) findViewById(R.id.tomato);
-        CheckBox mushroom = (CheckBox) findViewById(R.id.mushrooms);
-        CheckBox cucumber = (CheckBox) findViewById(R.id.cucumber);
-        CheckBox onion = (CheckBox) findViewById(R.id.onion);
-        CheckBox peas = (CheckBox) findViewById(R.id.peas);
-        CheckBox bellpepper = (CheckBox) findViewById(R.id.bellpepper);
+        CheckBox apple = findViewById(R.id.apples);
+        CheckBox banana = findViewById(R.id.bananas);
+        CheckBox oranges =  findViewById(R.id.oranges);
+        CheckBox grapes = findViewById(R.id.grapes);
+        CheckBox mango = findViewById(R.id.mango);
+        CheckBox melon = findViewById(R.id.melon);
+        CheckBox pineapple = findViewById(R.id.pineapple);
+        CheckBox kiwi = findViewById(R.id.kiwi);
+        CheckBox corn = findViewById(R.id.corn);
+        CheckBox broccoli = findViewById(R.id.broccoli);
+        CheckBox brusselsprouts = findViewById(R.id.brussel_sprouts);
+        CheckBox carrots = findViewById(R.id.carrots);
+        CheckBox avocado = findViewById(R.id.avocado);
+        CheckBox eggplant = findViewById(R.id.eggplant);
+        CheckBox tomato = findViewById(R.id.tomato);
+        CheckBox mushrooms = findViewById(R.id.mushrooms);
+        CheckBox cucumber = findViewById(R.id.cucumber);
+        CheckBox onion = findViewById(R.id.onion);
+        CheckBox peas = findViewById(R.id.peas);
+        CheckBox bellpepper = findViewById(R.id.bellpepper);
 
-        sharedpreferences = getSharedPreferences(MyPREFERENCES, Context.MODE_PRIVATE);
+        sharedpreferences = getSharedPreferences(checklist1Preferences, Context.MODE_PRIVATE);
+
         final SharedPreferences.Editor editor = sharedpreferences.edit();
-        if (sharedpreferences.contains("apple") && sharedpreferences.getBoolean("apple", false) == true) {
+
+        if (sharedpreferences.getBoolean("apple", false)) {
             apple.setChecked(true);
         }
 
-        if ( sharedpreferences.getBoolean("banana", false) == true) {
+        if (sharedpreferences.getBoolean("banana", false)) {
             banana.setChecked(true);
+        }
+
+        if (sharedpreferences.getBoolean("oranges", false)) {
+            oranges.setChecked(true);
+        }
+
+        if (sharedpreferences.getBoolean("grapes", false)) {
+            grapes.setChecked(true);
+        }
+
+        if (sharedpreferences.getBoolean("mango", false)) {
+            mango.setChecked(true);
+        }
+
+        if (sharedpreferences.getBoolean("melon", false)) {
+            melon.setChecked(true);
+        }
+
+        if (sharedpreferences.getBoolean("pineapple", false)) {
+            pineapple.setChecked(true);
+        }
+
+        if (sharedpreferences.getBoolean("kiwi", false)) {
+            kiwi.setChecked(true);
+        }
+
+        if (sharedpreferences.getBoolean("corn", false)) {
+            corn.setChecked(true);
+        }
+
+        if (sharedpreferences.getBoolean("broccoli", false)) {
+            broccoli.setChecked(true);
+        }
+
+        if (sharedpreferences.getBoolean("brussel_sprouts", false)) {
+            brusselsprouts.setChecked(true);
+        }
+
+        if (sharedpreferences.getBoolean("carrots", false)) {
+            carrots.setChecked(true);
+        }
+
+        if (sharedpreferences.getBoolean("avocado", false)) {
+            avocado.setChecked(true);
+        }
+
+        if (sharedpreferences.getBoolean("eggplant", false)) {
+            eggplant.setChecked(true);
+        }
+
+        if (sharedpreferences.getBoolean("tomato", false)) {
+            tomato.setChecked(true);
+        }
+
+        if (sharedpreferences.getBoolean("mushrooms", false)) {
+            mushrooms.setChecked(true);
+        }
+
+        if (sharedpreferences.getBoolean("cucumber", false)) {
+            cucumber.setChecked(true);
+        }
+
+        if (sharedpreferences.getBoolean("onion", false)) {
+            onion.setChecked(true);
+        }
+
+        if (sharedpreferences.getBoolean("peas", false)) {
+            peas.setChecked(true);
+        }
+
+        if (sharedpreferences.getBoolean("bellpepper", false)) {
+            bellpepper.setChecked(true);
         }
 
 
@@ -77,6 +151,240 @@ public class Checklist1Activity extends AppCompatActivity {
                     }
                 }
             });
+
+        oranges.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                if (oranges.isChecked()) {
+                    editor.putBoolean("oranges", true);
+                    editor.apply();
+                } else {
+                    editor.putBoolean("oranges", false);
+                    editor.apply();
+                }
+            }
+        });
+
+        grapes.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                if (grapes.isChecked()) {
+                    editor.putBoolean("grapes", true);
+                    editor.apply();
+                } else {
+                    editor.putBoolean("grapes", false);
+                    editor.apply();
+                }
+            }
+        });
+
+        mango.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                if (mango.isChecked()) {
+                    editor.putBoolean("mango", true);
+                    editor.apply();
+                } else {
+                    editor.putBoolean("mango", false);
+                    editor.apply();
+                }
+            }
+        });
+
+        melon.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                if (melon.isChecked()) {
+                    editor.putBoolean("melon", true);
+                    editor.apply();
+                } else {
+                    editor.putBoolean("melon", false);
+                    editor.apply();
+                }
+            }
+        });
+
+        pineapple.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                if (pineapple.isChecked()) {
+                    editor.putBoolean("pineapple", true);
+                    editor.apply();
+                } else {
+                    editor.putBoolean("pineapple", false);
+                    editor.apply();
+                }
+            }
+        });
+
+        kiwi.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                if (kiwi.isChecked()) {
+                    editor.putBoolean("kiwi", true);
+                    editor.apply();
+                } else {
+                    editor.putBoolean("kiwi", false);
+                    editor.apply();
+                }
+            }
+        });
+
+        corn.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                if (corn.isChecked()) {
+                    editor.putBoolean("corn", true);
+                    editor.apply();
+                } else {
+                    editor.putBoolean("corn", false);
+                    editor.apply();
+                }
+            }
+        });
+
+        broccoli.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                if (broccoli.isChecked()) {
+                    editor.putBoolean("broccoli", true);
+                    editor.apply();
+                } else {
+                    editor.putBoolean("broccoli", false);
+                    editor.apply();
+                }
+            }
+        });
+
+        brusselsprouts.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                if (brusselsprouts.isChecked()) {
+                    editor.putBoolean("brussel_sprouts", true);
+                    editor.apply();
+                } else {
+                    editor.putBoolean("brussel_sprouts", false);
+                    editor.apply();
+                }
+            }
+        });
+
+        carrots.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                if (carrots.isChecked()) {
+                    editor.putBoolean("carrots", true);
+                    editor.apply();
+                } else {
+                    editor.putBoolean("carrots", false);
+                    editor.apply();
+                }
+            }
+        });
+
+        avocado.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                if (avocado.isChecked()) {
+                    editor.putBoolean("avocado", true);
+                    editor.apply();
+                } else {
+                    editor.putBoolean("avocado", false);
+                    editor.apply();
+                }
+            }
+        });
+
+        eggplant.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                if (eggplant.isChecked()) {
+                    editor.putBoolean("eggplant", true);
+                    editor.apply();
+                } else {
+                    editor.putBoolean("eggplant", false);
+                    editor.apply();
+                }
+            }
+        });
+
+        tomato.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                if (tomato.isChecked()) {
+                    editor.putBoolean("tomato", true);
+                    editor.apply();
+                } else {
+                    editor.putBoolean("tomato", false);
+                    editor.apply();
+                }
+            }
+        });
+
+        mushrooms.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                if (mushrooms.isChecked()) {
+                    editor.putBoolean("mushrooms", true);
+                    editor.apply();
+                } else {
+                    editor.putBoolean("mushrooms", false);
+                    editor.apply();
+                }
+            }
+        });
+
+        cucumber.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                if (cucumber.isChecked()) {
+                    editor.putBoolean("cucumber", true);
+                    editor.apply();
+                } else {
+                    editor.putBoolean("cucumber", false);
+                    editor.apply();
+                }
+            }
+        });
+
+        onion.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                if (onion.isChecked()) {
+                    editor.putBoolean("onion", true);
+                    editor.apply();
+                } else {
+                    editor.putBoolean("onion", false);
+                    editor.apply();
+                }
+            }
+        });
+
+        peas.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                if (peas.isChecked()) {
+                    editor.putBoolean("peas", true);
+                    editor.apply();
+                } else {
+                    editor.putBoolean("peas", false);
+                    editor.apply();
+                }
+            }
+        });
+
+        bellpepper.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                if (bellpepper.isChecked()) {
+                    editor.putBoolean("bellpepper", true);
+                    editor.apply();
+                } else {
+                    editor.putBoolean("bellpepper", false);
+                    editor.apply();
+                }
+            }
+        });
 
         }
 
