@@ -21,34 +21,49 @@ public class Checklist1Activity extends AppCompatActivity {
         setContentView(R.layout.checklist1);
 
         CheckBox apple = (CheckBox) findViewById(R.id.apples);
-        CheckBox avo = (CheckBox) findViewById(R.id.avocado);
         CheckBox banana = (CheckBox) findViewById(R.id.bananas);
+        CheckBox oranges = (CheckBox) findViewById(R.id.oranges);
+        CheckBox grapes = (CheckBox) findViewById(R.id.grapes);
+        CheckBox mango = (CheckBox) findViewById(R.id.mango);
+        CheckBox melon = (CheckBox) findViewById(R.id.melon);
+        CheckBox pineapple = (CheckBox) findViewById(R.id.pineapple);
+        CheckBox Kiwi = (CheckBox) findViewById(R.id.kiwi);
+        CheckBox corn = (CheckBox) findViewById(R.id.corn);
+        CheckBox broccoli = (CheckBox) findViewById(R.id.broccoli);
+        CheckBox brussel = (CheckBox) findViewById(R.id.brussel_sprouts);
+        CheckBox carrots = (CheckBox) findViewById(R.id.carrots);
+        CheckBox avocado = (CheckBox) findViewById(R.id.avocado);
+        CheckBox eggplant = (CheckBox) findViewById(R.id.eggplant);
+        CheckBox tomato = (CheckBox) findViewById(R.id.tomato);
+        CheckBox mushroom = (CheckBox) findViewById(R.id.mushrooms);
+        CheckBox cucumber = (CheckBox) findViewById(R.id.cucumber);
+        CheckBox onion = (CheckBox) findViewById(R.id.onion);
+        CheckBox peas = (CheckBox) findViewById(R.id.peas);
+        CheckBox bellpepper = (CheckBox) findViewById(R.id.bellpepper);
+
         sharedpreferences = getSharedPreferences(MyPREFERENCES, Context.MODE_PRIVATE);
         final SharedPreferences.Editor editor = sharedpreferences.edit();
         if (sharedpreferences.contains("apple") && sharedpreferences.getBoolean("apple", false) == true) {
             apple.setChecked(true);
-        } else {
-            apple.setChecked(false);
         }
 
-        if (sharedpreferences.contains("banana") && sharedpreferences.getBoolean("banana", false) == true) {
+        if ( sharedpreferences.getBoolean("banana", false) == true) {
             banana.setChecked(true);
-        } else {
-            banana.setChecked(false);
         }
 
-            apple.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-                @Override
-                public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
-                    if (apple.isChecked()) {
-                        editor.putBoolean("apple", true);
-                        editor.apply();
-                    } else {
-                        editor.putBoolean("apple", false);
-                        editor.apply();
-                    }
+
+        apple.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                if (apple.isChecked()) {
+                    editor.putBoolean("apple", true);
+                    editor.apply();
+                } else {
+                    editor.putBoolean("apple", false);
+                    editor.apply();
                 }
-            });
+            }
+        });
 
         banana.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
                 @Override

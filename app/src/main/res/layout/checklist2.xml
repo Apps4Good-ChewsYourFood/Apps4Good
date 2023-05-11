@@ -35,13 +35,6 @@
                 android:textColor="#000000"
                 android:textSize="20sp" />
 
-            <Spinner
-                android:id="@+id/fruits_spinner"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:prompt="@string/select_fruit"
-                android:spinnerMode="dropdown" />
-
             <CheckBox
                 android:id="@+id/apples"
                 android:layout_width="wrap_content"
@@ -106,13 +99,6 @@
                 android:textColor="#000000"
                 android:textSize="20sp" />
 
-            <Spinner
-                android:id="@+id/vegetables_spinner"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:prompt="@string/select_vegetable"
-                android:spinnerMode="dropdown" />
-
             <CheckBox
                 android:id="@+id/corn"
                 android:layout_width="wrap_content"
@@ -169,6 +155,34 @@
                 android:text="@string/mushroom"
                 android:textColor="@color/Denim" />
 
+            <CheckBox
+                android:id="@+id/cucumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/cucumber"
+                android:textColor="@color/Denim" />
+
+            <CheckBox
+                android:id="@+id/onion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/onion"
+                android:textColor="@color/Denim" />
+
+            <CheckBox
+                android:id="@+id/peas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/peas"
+                android:textColor="@color/Denim" />
+
+            <CheckBox
+                android:id="@+id/bellpepper"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/bellpepper"
+                android:textColor="@color/Denim" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -176,13 +190,6 @@
                 android:text="@string/meats"
                 android:textColor="#000000"
                 android:textSize="20sp" />
-
-            <Spinner
-                android:id="@+id/meats_spinner"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:prompt="@string/select_fruit"
-                android:spinnerMode="dropdown" />
 
             <CheckBox
                 android:id="@+id/beef"
@@ -248,13 +255,6 @@
                 android:textColor="#000000"
                 android:textSize="20sp" />
 
-            <Spinner
-                android:id="@+id/dairy_spinner"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:prompt="@string/select_dairy"
-                android:spinnerMode="dropdown" />
-
             <CheckBox
                 android:id="@+id/milk"
                 android:layout_width="wrap_content"
@@ -304,13 +304,6 @@
                 android:text="@string/fish"
                 android:textColor="#000000"
                 android:textSize="20sp" />
-
-            <Spinner
-                android:id="@+id/fish_spinner"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:prompt="@string/select_fish"
-                android:spinnerMode="dropdown" />
 
             <CheckBox
                 android:id="@+id/cod"
@@ -397,13 +390,6 @@
                 android:text="@string/carbohydrates"
                 android:textColor="#000000"
                 android:textSize="20sp" />
-
-            <Spinner
-                android:id="@+id/carbs_spinner"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:prompt="@string/select_carbs"
-                android:spinnerMode="dropdown" />
 
             <CheckBox
                 android:id="@+id/wheatbread"
