@@ -11,6 +11,12 @@ public class Ingredient {
     private String name;
 
  	// Constructor
+	/**
+	 * Null constructor to be used by Firebase
+	 */
+	public Ingredient(){
+		this.name = "";
+	}
     /**
      * This constructor creates an ingredient with a name. In the future it is
      * possible to include other identifying features such as allergens. Most
@@ -46,4 +52,19 @@ public class Ingredient {
         return name.equals(check.name);
 	}
 
+	/**
+	 * Method that returns the name of the ingredient. Helps Firebase store the data from the JSON file.
+	 * @return - the name of the ingredient
+	 */
+	public String getName() {
+		return name;
+	}
+
+	/**
+	 * Method that changes the name of an ingredient to the one provided
+	 * @param name - the name that is stored as the new name of the ingredient
+	 */
+	public void setName(String name) {
+		this.name = name;
+	}
 }

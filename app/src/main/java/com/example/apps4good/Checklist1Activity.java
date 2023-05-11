@@ -13,6 +13,11 @@ public class Checklist1Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.checklist1);
     }
+    @Override
+    protected void onPause(){
+        super.onPause();
+
+    }
     public void startMainActivity(View v){
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);

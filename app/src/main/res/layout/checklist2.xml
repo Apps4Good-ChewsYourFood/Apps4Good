@@ -9,7 +9,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/selectFoodsLike"
+        android:text="@string/selectFoodsDisike"
         android:fontFamily="cursive"
         android:textColor="#4a7996"
         android:textSize="27sp"
