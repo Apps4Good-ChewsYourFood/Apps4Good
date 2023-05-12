@@ -109,6 +109,7 @@
                 android:textColor="#000000"
                 android:textSize="20sp" />
 
+
             <CheckBox
                 android:id="@+id/corn"
                 android:layout_width="wrap_content"
@@ -132,7 +133,7 @@
                 android:buttonTint="@color/Denim"
                 android:text="@string/brussel_sprouts"
                 android:textColor="@color/Denim" />
-
+          
             <CheckBox
                 android:id="@+id/carrots"
                 android:layout_width="wrap_content"
@@ -280,6 +281,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:fontFamily="serif"
                 android:padding="10dp"
                 android:text="@string/dairy"
                 android:textColor="#000000"
@@ -336,6 +338,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:fontFamily="serif"
                 android:padding="10dp"
                 android:text="@string/fish"
                 android:textColor="#000000"
@@ -433,6 +436,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:fontFamily="serif"
                 android:padding="10dp"
                 android:text="@string/carbohydrates"
                 android:textColor="#000000"
