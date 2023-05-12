@@ -20,12 +20,11 @@
 
         <!-- Settings button -->
         <Button
-            android:id="@+id/settings_button"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="📊️"
-            android:textSize="30sp"/>
+            android:textSize="30sp" />
 
         <!-- Home button -->
         <Button
@@ -33,8 +32,8 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="🏠"
-            android:textSize="30sp"/>
+            android:text="@string/homeButtonLabel"
+            android:textSize="30sp" />
 
         <!-- Favorites button -->
         <Button
@@ -42,10 +41,10 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="❤️"
-            android:textSize="30sp"/>
+            android:text="@string/favoritesButtonLabel"
+            android:textSize="30sp" />
     </LinearLayout>
-
+  
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="602dp"
@@ -93,6 +92,4 @@
            />
 
     </androidx.cardview.widget.CardView>
-
 </RelativeLayout>
-

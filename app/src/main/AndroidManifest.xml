@@ -20,6 +20,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".Checklist1Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Checklist2Activity"
+            android:exported="false" />
     </application>
 
 </manifest>

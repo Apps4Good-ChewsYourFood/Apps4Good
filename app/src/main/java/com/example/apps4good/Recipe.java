@@ -20,7 +20,10 @@ public class Recipe {
      * Default constructor. Constructs a Recipe object and creates an ArrayList to
      * store Ingredient objects
      */
-    public Recipe() {
+
+    public Recipe(){
+        this.name = "";
+        this.instructions = "";
         this.ingredients = new ArrayList<Ingredient>();
     }
 
@@ -30,6 +33,7 @@ public class Recipe {
      */
     public Recipe(String name) {
         this.name = name;
+        this.instructions = "";
         this.ingredients = new ArrayList<Ingredient>();
     }
 

@@ -12,16 +12,7 @@
         android:layout_marginTop="250dp"
         android:fontFamily="cursive"
         android:gravity="center"
-        android:text="Welcome to Try"
-        android:textColor="#4a7996"
-        android:textSize="70sp" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:fontFamily="cursive"
-        android:text="New Foods"
+        android:text="@string/title_home"
         android:textColor="#4a7996"
         android:textSize="70sp" />
 
@@ -37,9 +28,10 @@
         android:background="@color/Denim"
         android:backgroundTint="#000000"
         android:fontFamily="serif"
+        android:onClick="startChecklist1"
         android:padding="16dp"
         android:radius="100dp"
-        android:text="Click here to continue"
+        android:text="@string/button_home"
         android:textColor="#FFFFFF" />
 
 </RelativeLayout>
