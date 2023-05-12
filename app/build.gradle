@@ -1,5 +1,6 @@
 plugins {
     id 'com.android.application'
+    id 'com.google.gms.google-services'
 }
 
 android {
@@ -33,8 +34,14 @@ dependencies {
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
 
-    // The following line imports Jama. The code is from https://www.geeksforgeeks.org/android-build-gradle/.
+    //Firebase imports
+    implementation 'com.google.firebase:firebase-database'
+    implementation 'com.google.firebase:firebase-analytics'
+    implementation platform('com.google.firebase:firebase-bom:32.0.0')
+
+    // The following line imports JaMa (Java Matrix). The code is from https://www.geeksforgeeks.org/android-build-gradle/.
     implementation fileTree(include: [ '*.jar' ], dir: 'libs')
+    implementation 'com.google.firebase:firebase-common-ktx:20.3.2'
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'

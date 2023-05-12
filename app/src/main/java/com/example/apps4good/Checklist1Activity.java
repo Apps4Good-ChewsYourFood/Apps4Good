@@ -1,25 +1,69 @@
 package com.example.apps4good;
+import static com.example.apps4good.Controller.ingredientIds;
+import static com.example.apps4good.Controller.ingredientStrings;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.SharedPreferencesKt;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 
 
 public class Checklist1Activity extends AppCompatActivity {
-
-    public static final String checklist1Preferences = "checklist1Preferences" ;
-
-    SharedPreferences sharedpreferences;
+    private static final String checklist1Preferences = "checklist1Preferences" ;
+    private SharedPreferences sharedpreferences;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Log.v("Checklist1Activity", "onCreate called");
         setContentView(R.layout.checklist1);
+        sharedpreferences = getSharedPreferences(checklist1Preferences, Context.MODE_PRIVATE);
+        TestFirebaseWithSVD.sharedPreferencesTest(sharedpreferences);
+        for(int i = 0; i < ingredientStrings.length; i++){
+            String stringReference = ingredientStrings[i];
+            CheckBox elementReference = findViewById(ingredientIds[i]);
+            Log.v("Checklist1Activity", stringReference + ": " + sharedpreferences.getBoolean(stringReference, false));
+            elementReference.setChecked(sharedpreferences.getBoolean(stringReference, false));
+        }
+    }
 
+    public void updateSharedPreferences(){
+        Log.v("Checklist1Activity", "onDestroy called");
+        sharedpreferences = getSharedPreferences(checklist1Preferences, Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedpreferences.edit();
+        for(int i = 0; i < ingredientStrings.length; i++){
+            String stringReference = ingredientStrings[i];
+            CheckBox elementReference = findViewById(ingredientIds[i]);
+            Log.v("Checklist1Activity", stringReference + ": " + elementReference.isChecked());
+            editor.putBoolean(stringReference, elementReference.isChecked());
+        }
+        editor.apply();
+    }
+    public void startMainActivity(View v){
+        updateSharedPreferences();
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
+    }
+    public void startChecklist2(View v){
+        updateSharedPreferences();
+        Intent intent = new Intent(this, Checklist2Activity.class);
+        startActivity(intent);
+
+    }
+}
+
+
+
+
+
+
+
+        /*
         CheckBox apple = findViewById(R.id.apples);
         CheckBox banana = findViewById(R.id.bananas);
         CheckBox oranges =  findViewById(R.id.oranges);
@@ -34,6 +78,8 @@ public class Checklist1Activity extends AppCompatActivity {
         CheckBox carrots = findViewById(R.id.carrots);
         CheckBox avocado = findViewById(R.id.avocado);
         CheckBox eggplant = findViewById(R.id.eggplant);
+        */
+        /*
         CheckBox tomato = findViewById(R.id.tomato);
         CheckBox mushrooms = findViewById(R.id.mushrooms);
         CheckBox cucumber = findViewById(R.id.cucumber);
@@ -246,6 +292,7 @@ public class Checklist1Activity extends AppCompatActivity {
         broccoli.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                Log.v("Checklist1Activity", Boolean.toString(broccoli.isChecked()));
                 if (broccoli.isChecked()) {
                     editor.putBoolean("broccoli", true);
                     editor.apply();
@@ -385,17 +432,4 @@ public class Checklist1Activity extends AppCompatActivity {
                 }
             }
         });
-
-        }
-
-    public void startMainActivity(View v){
-        Intent intent = new Intent(this, MainActivity.class);
-        startActivity(intent);
-    }
-    public void startChecklist2(View v){
-        Intent intent = new Intent(this, Checklist2Activity.class);
-        startActivity(intent);
-
-    }
-
-}
+        */

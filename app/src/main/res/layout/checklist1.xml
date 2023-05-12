@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#eeffd1">
+    android:background="@color/Pale_Yellow"
+    android:orientation="vertical">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/selectFoodsLike"
         android:fontFamily="cursive"
-        android:textColor="#4a7996"
-        android:textSize="27sp"
         android:gravity="center"
         android:paddingTop="16dp"
-        android:paddingBottom="16dp"/>
+        android:paddingBottom="16dp"
+        android:text="@string/selectFoodsLike"
+        android:textColor="#4a7996"
+        android:textSize="27sp" />
 
     <ScrollView
         android:layout_width="match_parent"
@@ -25,6 +25,7 @@
             android:id="@+id/checklist1Layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="#33FFFFFF"
             android:orientation="vertical"
             android:scrollbarSize="@dimen/cardview_default_radius">
 
@@ -40,6 +41,7 @@
                 android:id="@+id/apples"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:buttonTint="@color/Denim"
                 android:text="@string/apples"
                 android:textColor="@color/Denim" />
 
@@ -47,6 +49,7 @@
                 android:id="@+id/bananas"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:buttonTint="@color/Denim"
                 android:text="@string/bananas"
                 android:textColor="@color/Denim" />
 
@@ -54,6 +57,7 @@
                 android:id="@+id/oranges"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:buttonTint="@color/Denim"
                 android:text="@string/oranges"
                 android:textColor="@color/Denim" />
 
@@ -61,6 +65,7 @@
                 android:id="@+id/grapes"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:buttonTint="@color/Denim"
                 android:text="@string/grapes"
                 android:textColor="@color/Denim" />
 
@@ -68,6 +73,7 @@
                 android:id="@+id/mango"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:buttonTint="@color/Denim"
                 android:text="@string/mango"
                 android:textColor="@color/Denim" />
 
@@ -75,6 +81,7 @@
                 android:id="@+id/melon"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:buttonTint="@color/Denim"
                 android:text="@string/melon"
                 android:textColor="@color/Denim" />
 
@@ -82,6 +89,7 @@
                 android:id="@+id/pineapple"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:buttonTint="@color/Denim"
                 android:text="@string/pineapple"
                 android:textColor="@color/Denim" />
 
@@ -89,6 +97,7 @@
                 android:id="@+id/kiwi"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:buttonTint="@color/Denim"
                 android:text="@string/kiwi"
                 android:textColor="@color/Denim" />
 
@@ -104,6 +113,7 @@
                 android:id="@+id/corn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:buttonTint="@color/Denim"
                 android:text="@string/corn"
                 android:textColor="@color/Denim" />
 
@@ -111,6 +121,7 @@
                 android:id="@+id/broccoli"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:buttonTint="@color/Denim"
                 android:text="@string/broccoli"
                 android:textColor="@color/Denim" />
 
@@ -118,6 +129,7 @@
                 android:id="@+id/brussel_sprouts"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:buttonTint="@color/Denim"
                 android:text="@string/brussel_sprouts"
                 android:textColor="@color/Denim" />
 
@@ -125,6 +137,7 @@
                 android:id="@+id/carrots"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:buttonTint="@color/Denim"
                 android:text="@string/carrots"
                 android:textColor="@color/Denim" />
 
@@ -132,6 +145,7 @@
                 android:id="@+id/avocado"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:buttonTint="@color/Denim"
                 android:text="@string/avocado"
                 android:textColor="@color/Denim" />
 
@@ -139,6 +153,7 @@
                 android:id="@+id/eggplant"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:buttonTint="@color/Denim"
                 android:text="@string/eggplant"
                 android:textColor="@color/Denim" />
 
@@ -146,6 +161,7 @@
                 android:id="@+id/tomato"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:buttonTint="@color/Denim"
                 android:text="@string/tomato"
                 android:textColor="@color/Denim" />
 
@@ -153,6 +169,7 @@
                 android:id="@+id/cucumber"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:buttonTint="@color/Denim"
                 android:text="@string/cucumber"
                 android:textColor="@color/Denim" />
 
@@ -160,6 +177,7 @@
                 android:id="@+id/onion"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:buttonTint="@color/Denim"
                 android:text="@string/onion"
                 android:textColor="@color/Denim" />
 
@@ -167,6 +185,7 @@
                 android:id="@+id/peas"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:buttonTint="@color/Denim"
                 android:text="@string/peas"
                 android:textColor="@color/Denim" />
 
@@ -174,6 +193,7 @@
                 android:id="@+id/bellpepper"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:buttonTint="@color/Denim"
                 android:text="@string/bellpepper"
                 android:textColor="@color/Denim" />
 
@@ -181,6 +201,7 @@
                 android:id="@+id/mushrooms"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:buttonTint="@color/Denim"
                 android:text="@string/mushroom"
                 android:textColor="@color/Denim" />
 
@@ -196,6 +217,7 @@
                 android:id="@+id/beef"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:buttonTint="@color/Denim"
                 android:text="@string/beef"
                 android:textColor="@color/Denim" />
 
@@ -203,6 +225,7 @@
                 android:id="@+id/chicken"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:buttonTint="@color/Denim"
                 android:text="@string/chicken"
                 android:textColor="@color/Denim" />
 
@@ -210,6 +233,7 @@
                 android:id="@+id/pork"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:buttonTint="@color/Denim"
                 android:text="@string/pork"
                 android:textColor="@color/Denim" />
 
@@ -217,6 +241,7 @@
                 android:id="@+id/veal"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:buttonTint="@color/Denim"
                 android:text="@string/veal"
                 android:textColor="@color/Denim" />
 
@@ -224,6 +249,7 @@
                 android:id="@+id/goat"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:buttonTint="@color/Denim"
                 android:text="@string/goat"
                 android:textColor="@color/Denim" />
 
@@ -231,6 +257,7 @@
                 android:id="@+id/lamb"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:buttonTint="@color/Denim"
                 android:text="@string/lamb"
                 android:textColor="@color/Denim" />
 
@@ -238,6 +265,7 @@
                 android:id="@+id/horse"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:buttonTint="@color/Denim"
                 android:text="@string/horse"
                 android:textColor="@color/Denim" />
 
@@ -245,6 +273,7 @@
                 android:id="@+id/eggs"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:buttonTint="@color/Denim"
                 android:text="@string/eggs"
                 android:textColor="@color/Denim" />
 
@@ -260,6 +289,7 @@
                 android:id="@+id/milk"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:buttonTint="@color/Denim"
                 android:text="@string/milk"
                 android:textColor="@color/Denim" />
 
@@ -267,6 +297,7 @@
                 android:id="@+id/icecream"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:buttonTint="@color/Denim"
                 android:text="@string/iceCream"
                 android:textColor="@color/Denim" />
 
@@ -274,6 +305,7 @@
                 android:id="@+id/butter"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:buttonTint="@color/Denim"
                 android:text="@string/butter"
                 android:textColor="@color/Denim" />
 
@@ -281,6 +313,7 @@
                 android:id="@+id/sourcream"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:buttonTint="@color/Denim"
                 android:text="@string/sourCream"
                 android:textColor="@color/Denim" />
 
@@ -288,6 +321,7 @@
                 android:id="@+id/cheese"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:buttonTint="@color/Denim"
                 android:text="@string/cheese"
                 android:textColor="@color/Denim" />
 
@@ -295,6 +329,7 @@
                 android:id="@+id/yogurt"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:buttonTint="@color/Denim"
                 android:text="@string/yogurt"
                 android:textColor="@color/Denim" />
 
@@ -310,6 +345,7 @@
                 android:id="@+id/cod"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:buttonTint="@color/Denim"
                 android:text="@string/cod"
                 android:textColor="@color/Denim" />
 
@@ -317,6 +353,7 @@
                 android:id="@+id/tuna"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:buttonTint="@color/Denim"
                 android:text="@string/tuna"
                 android:textColor="@color/Denim" />
 
@@ -324,6 +361,7 @@
                 android:id="@+id/salmon"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:buttonTint="@color/Denim"
                 android:text="@string/salmon"
                 android:textColor="@color/Denim" />
 
@@ -331,6 +369,7 @@
                 android:id="@+id/sushi"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:buttonTint="@color/Denim"
                 android:text="@string/sushi"
                 android:textColor="@color/Denim" />
 
@@ -338,6 +377,7 @@
                 android:id="@+id/octopus"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:buttonTint="@color/Denim"
                 android:text="@string/octopus"
                 android:textColor="@color/Denim" />
 
@@ -345,6 +385,7 @@
                 android:id="@+id/shrimp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:buttonTint="@color/Denim"
                 android:text="@string/shrimp"
                 android:textColor="@color/Denim" />
 
@@ -352,6 +393,7 @@
                 android:id="@+id/crab"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:buttonTint="@color/Denim"
                 android:text="@string/crab"
                 android:textColor="@color/Denim" />
 
@@ -359,6 +401,7 @@
                 android:id="@+id/clam"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:buttonTint="@color/Denim"
                 android:text="@string/clam"
                 android:textColor="@color/Denim" />
 
@@ -366,6 +409,7 @@
                 android:id="@+id/mussel"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:buttonTint="@color/Denim"
                 android:text="@string/mussel"
                 android:textColor="@color/Denim" />
 
@@ -373,6 +417,7 @@
                 android:id="@+id/lobster"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:buttonTint="@color/Denim"
                 android:text="@string/lobster"
                 android:textColor="@color/Denim" />
 
@@ -380,6 +425,7 @@
                 android:id="@+id/oyster"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:buttonTint="@color/Denim"
                 android:text="@string/oyster"
                 android:textColor="@color/Denim" />
 
@@ -396,6 +442,7 @@
                 android:id="@+id/wheatbread"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:buttonTint="@color/Denim"
                 android:text="@string/wheatbread"
                 android:textColor="@color/Denim" />
 
@@ -403,6 +450,7 @@
                 android:id="@+id/ryebread"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:buttonTint="@color/Denim"
                 android:text="@string/ryebread"
                 android:textColor="@color/Denim" />
 
@@ -410,42 +458,8 @@
                 android:id="@+id/whitebread"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:buttonTint="@color/Denim"
                 android:text="@string/whitebread"
-                android:textColor="@color/Denim" />
-
-            <CheckBox
-                android:id="@+id/pizza"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/pizza"
-                android:textColor="@color/Denim" />
-
-            <CheckBox
-                android:id="@+id/fries"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/fries"
-                android:textColor="@color/Denim" />
-
-            <CheckBox
-                android:id="@+id/cookie"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/cookie"
-                android:textColor="@color/Denim" />
-
-            <CheckBox
-                android:id="@+id/pasta"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/pasta"
-                android:textColor="@color/Denim" />
-
-            <CheckBox
-                android:id="@+id/cake"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/cake"
                 android:textColor="@color/Denim" />
 
             <Button
@@ -465,6 +479,5 @@
 
         </LinearLayout>
     </ScrollView>
-
 </LinearLayout>
 

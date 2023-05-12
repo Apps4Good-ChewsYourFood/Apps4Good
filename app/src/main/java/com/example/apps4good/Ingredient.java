@@ -45,11 +45,19 @@ public class Ingredient {
 	 * @return - true if the Ingredient objects are the same; false if the objects
 	 *         are different (including if the parameter is null)
 	 */
-	public boolean equals(Ingredient check) {
+	@Override
+	public boolean equals(Object check) {
+
         if(check == null) {
             return false;
         }
-        return name.equals(check.name);
+		Ingredient temp;
+		try{
+			temp = (Ingredient) check;
+		} catch(Exception e){
+			return false;
+		}
+        return name.equals(temp.name);
 	}
 
 	/**

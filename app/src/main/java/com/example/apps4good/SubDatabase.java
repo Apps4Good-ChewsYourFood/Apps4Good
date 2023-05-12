@@ -20,7 +20,9 @@ import Jama.SingularValueDecomposition;
 public class SubDatabase {
     // Data
     private double[][] recipesMatrix;
+
     private ArrayList<Recipe> recipes;
+    private ArrayList<Ingredient> sharedIngredients;
     private ArrayList<Ingredient> ingredients;
 
     // Constructors
@@ -31,6 +33,7 @@ public class SubDatabase {
     public SubDatabase() {
         recipes = new ArrayList<Recipe>();
         ingredients = new ArrayList<Ingredient>();
+        sharedIngredients = new ArrayList<Ingredient>();
     }
 
     // Methods
@@ -44,6 +47,8 @@ public class SubDatabase {
             for (Ingredient i : newRecipe.getIngredients()) {
                 if (!ingredients.contains(i)) {
                     ingredients.add(i);
+                } else if (!sharedIngredients.contains(i)){
+                    sharedIngredients.add(i);
                 }
             }
             recipes.add(newRecipe);
@@ -197,10 +202,10 @@ public class SubDatabase {
      */
     @Override
     public String toString() {
-        String output = "Ingredients\n" + ingredients + "\n\nRecipes:";
-        for (int i = 0; i < getRecipes().size(); i++) {
-            output += "\n" + getRecipes().get(i);
-        }
+        String output = "Ingredients\n" + ingredients + "\nShared Ingredients: " + sharedIngredients +"\n\nRecipes:";
+        //for (int i = 0; i < getRecipes().size(); i++) {
+            //output += "\n" + getRecipes().get(i);
+        //}
         return output;
     }
 

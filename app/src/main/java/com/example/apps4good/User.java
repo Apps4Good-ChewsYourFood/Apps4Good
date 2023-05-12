@@ -9,8 +9,6 @@ import java.util.HashMap;
 public class User {
 
     // Data
-    public boolean like;
-    public Ingredient ingredient;
     private HashMap<Ingredient, Boolean> preferences;
 
     // Constructor
