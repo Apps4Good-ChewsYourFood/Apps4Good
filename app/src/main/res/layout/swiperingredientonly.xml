@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#eeffd1">
+
+
+    <!-- Bottom bar -->
+    <LinearLayout
+        android:id="@+id/bottom_bar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/Denim"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+
+        <!-- Settings button -->
+        <Button
+            android:id="@+id/settings_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="📊️"
+            android:textSize="30sp"/>
+
+        <!-- Home button -->
+        <Button
+            android:id="@+id/home_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="🏠"
+            android:textSize="30sp"/>
+
+        <!-- Favorites button -->
+        <Button
+            android:id="@+id/favorites_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="❤️"
+            android:textSize="30sp"/>
+    </LinearLayout>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="602dp"
+        android:layout_above="@+id/bottom_bar"
+        android:layout_marginBottom="40dp" >
+
+
+        <EditText
+            android:id="@+id/editTextTextPersonName2"
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:ems="10"
+            android:fontFamily="cursive"
+            android:gravity="center"
+            android:inputType="textPersonName"
+            android:text="Ingredient"
+            android:textColor="#4a7996"
+            android:textSize="90sp" />
+
+        <Button
+            android:id="@+id/button5"
+            android:layout_gravity="left"
+            android:layout_marginTop="500dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="👍"
+            android:textSize="20sp"
+            android:backgroundTint="#77bd68"
+            />
+
+        <Button
+            android:id="@+id/button6"
+            android:layout_gravity="right"
+            android:layout_marginTop="500dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="👎"
+            android:textSize="20sp"
+            android:backgroundTint="#d16a5c"
+            />
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>
+
