@@ -44,6 +44,11 @@ public class Checklist1Activity extends AppCompatActivity {
         }
         editor.apply();
     }
+    @Override
+    protected void onPause(){
+        super.onPause();
+
+    }
     public void startMainActivity(View v){
         updateSharedPreferences();
         Intent intent = new Intent(this, MainActivity.class);
