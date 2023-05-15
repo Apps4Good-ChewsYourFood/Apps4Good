@@ -7,31 +7,31 @@ package com.example.apps4good;
  *
  */
 public class Ingredient {
-    // Data
-    private String name;
+	// Data
+	private String name;
 
- 	// Constructor
+	// Constructor
 	/**
 	 * Null constructor to be used by Firebase
 	 */
 	public Ingredient(){
 		this.name = "";
 	}
-    /**
-     * This constructor creates an ingredient with a name. In the future it is
-     * possible to include other identifying features such as allergens. Most
-     * likely, the Ingredient Object would have the same name as the ingredient.
-     */
-    public Ingredient(String name) {
-        this.name = name;
-    }
-    // Methods
 	/**
-  	* Returns the name of the ingredient a possible extension would be to add more
-  	 * data to the ingredient class. Then we would have to decide if the toString()
-  	 * includes this data.
-  	 *
-  	 * @return - the name of the ingredient
+	 * This constructor creates an ingredient with a name. In the future it is
+	 * possible to include other identifying features such as allergens. Most
+	 * likely, the Ingredient Object would have the same name as the ingredient.
+	 */
+	public Ingredient(String name) {
+		this.name = name;
+	}
+	// Methods
+	/**
+	 * Returns the name of the ingredient a possible extension would be to add more
+	 * data to the ingredient class. Then we would have to decide if the toString()
+	 * includes this data.
+	 *
+	 * @return - the name of the ingredient
 	 */
 	@Override
 	public String toString() {
@@ -48,16 +48,16 @@ public class Ingredient {
 	@Override
 	public boolean equals(Object check) {
 
-        if(check == null) {
-            return false;
-        }
+		if(check == null) {
+			return false;
+		}
 		Ingredient temp;
 		try{
 			temp = (Ingredient) check;
 		} catch(Exception e){
 			return false;
 		}
-        return name.equals(temp.name);
+		return name.equals(temp.name);
 	}
 
 	/**

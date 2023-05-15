@@ -1,5 +1,7 @@
 package com.example.apps4good;
 
+import android.util.Log;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
@@ -112,7 +114,7 @@ public class SubDatabase {
      * This method gets the recipe from the ArrayList<Ingredient> corresponding to
      * the index provided
      *
-     * @param index
+     * @param index the index from which the recipe is pulled
      * @return the recipe corresponding to the index provided
      */
     public Recipe getRecipe(int index) {
@@ -156,16 +158,22 @@ public class SubDatabase {
         }
 
         // Get user preferences
-        HashMap<Ingredient, Boolean> preferences = user.getPreferences();
+        HashMap<Integer, Boolean> preferences = user.getPreferences();
 
         // Convert the user preferences into a double[][]. The preferencesArr indicates
         // whether or not the user likes to corresponding Ingredient in ingredients. 1
         // means they like it, -1 means they do not like it, and 0 means they have not
         // responded.
+        Log.v("Work, SubDatabase", ingredients.toString());
         double[][] preferencesArr = new double[1][ingredients.size()];
+        Log.v("Work, SubDatabase", preferences.toString());
         for (int i = 0; i < ingredients.size(); i++) {
             try {
-                Boolean like = preferences.get(ingredients.get(i));
+                Boolean like = preferences.get(Integer.parseInt(ingredients.get(i).getName()));
+                if(like != null){
+                    //Log.v("Work, SubDatabase", preferences.get(Integer.parseInt(ingredients.get(i).getName())) + " " + ingredients.get(i) + " in getRecommendation");
+                    Log.v("Work, SubDatabase", ingredients.get(i).getName() + " preference interpreted");
+                }
                 if (like) {
                     preferencesArr[0][i] = 1;
                 } else {
@@ -175,13 +183,14 @@ public class SubDatabase {
                 preferencesArr[0][i] = 0;
             }
         }
-
+        //Log.v("TestingUser", "prefArr done");
+        Log.v("Work, SubDatabase", Arrays.deepToString(preferencesArr));
         // Calculate the recommendation using the SVD
         Matrix preferencesMatrix = new Matrix(preferencesArr);
         Matrix v = getSVD().getV();
         Matrix vTrimmed = v.getMatrix(0, ingredients.size() - 1, 0, valuesToConsider);
-        v.print(0, 4);
-        vTrimmed.print(0, 4);
+        //v.print(0, 4);
+        //vTrimmed.print(0, 4);
         // The userRecommendation contains a projected score for how much a suer would
         // like or dislike every ingredient.
         double[] tempRecommendationStorage = preferencesMatrix.times(vTrimmed).times(vTrimmed.transpose())
@@ -189,7 +198,7 @@ public class SubDatabase {
 
         // Order the ingredients from highest to lowest score from the SVD.
         ArrayList<Ingredient> userRecommendation = new ArrayList<Ingredient>();
-        System.out.println(Arrays.toString(tempRecommendationStorage));
+        //System.out.println(Arrays.toString(tempRecommendationStorage));
         while (!(getMaxIngredient(tempRecommendationStorage, false) == null)) {
             userRecommendation.add(getMaxIngredient(tempRecommendationStorage, true));
         }

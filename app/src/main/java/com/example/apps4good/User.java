@@ -1,4 +1,7 @@
 package com.example.apps4good;
+import android.util.Log;
+
+import java.util.HashMap;
 
 import java.util.HashMap;
 
@@ -9,7 +12,7 @@ import java.util.HashMap;
 public class User {
 
     // Data
-    private HashMap<Ingredient, Boolean> preferences;
+    private HashMap<Integer, Boolean> preferences;
 
     // Constructor
 
@@ -20,7 +23,7 @@ public class User {
      * ingredient.
      */
     public User() {
-        preferences = new HashMap<Ingredient, Boolean>();
+        preferences = new HashMap<Integer, Boolean>();
     }
 
     // Methods
@@ -34,10 +37,11 @@ public class User {
      *               ingredient.
      */
     public void addPreference(Ingredient name, boolean choice) {
-        if (preferences.containsKey(name))
-            System.out.println("You've already made a decision about this ingredient");
-        else
-            preferences.put(name, choice);
+        try{
+            preferences.put(Integer.parseInt(name.getName()), choice);
+        } catch (NumberFormatException e){
+            //Log.v("User", name.toString());
+        }
     }
 
     /**
@@ -69,7 +73,7 @@ public class User {
      *
      * @return user's preferences
      */
-    public HashMap<Ingredient, Boolean> getPreferences() {
+    public HashMap<Integer, Boolean> getPreferences() {
         return preferences;
     }
 

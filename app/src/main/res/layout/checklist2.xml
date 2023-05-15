@@ -462,11 +462,18 @@
                 android:textColor="@color/Denim" />
 
             <Button
-                android:id="@+id/previousChecklist1"
+                android:id="@+id/previousScreen2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:onClick="startChecklist1"
                 android:text="@string/previous" />
+
+            <Button
+                android:id="@+id/nextScreen2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="startSwiperIngredient"
+                android:text="@string/next" />
 
         </LinearLayout>
     </ScrollView>
