@@ -14,6 +14,7 @@
     <string name="carbohydrates">Carbs</string>
     <string name="vegetables">Vegetables</string>
     <string name="fish">Fish</string>
+    <string name="other">Other</string>
 
     <!-- Names of all ingredients-->
     <string name="apples">Apples 🍎</string>
@@ -64,15 +65,36 @@
     <string name="wheatbread">Wheat Bread 🥖</string>
     <string name="ryebread">Rye Bread 🌾</string>
     <string name="whitebread">White Bread 🍞</string>
-    <string name="pizza">Pizza 🍕</string>
-    <string name="fries">Fries 🍟</string>
-    <string name="cookie">Cookie 🍪</string>
-    <string name="pasta">Pasta 🍝</string>
-    <string name="cake">Cake 🍰</string>
+    //new
+    <string name= "water">Water 💧</string>
+    <string name= "brownsugar">Brown Sugar 🟤</string>
+    <string name= "salt">Salt 🧂</string>
+    <string name= "vanilla">Vanilla Extract 🫗</string>
+    <string name= "garlicclove">Garlic 🧄</string>
+    <string name= "flour">Flour ⬜️</string>
+    <string name= "cheddarcheese">Cheddar Cheese 🧀</string>
+    <string name= "sugar">Sugar ⚪️</string>
+    <string name= "lemonjuice">Lemon Juice 🍋</string>
+    <string name= "oliveoil">Olive Oil 🫒</string>
+    <string name= "celery">Celery 🌱</string>
+    <string name= "pepper">Pepper ▪️</string>
+    <string name= "mayo">Mayo 🥪</string>
+    <string name= "cottagecheese">Cottage Cheese ◻️</string>
+    <string name= "pecans">Pecans 🔩</string>
+    <string name= "cayennepepper">Cayenne Pepper 🌶️</string>
+    <string name= "limejuice">Lime Juice 🟢</string>
+    <string name= "heavycream">Heavy Cream 🥛</string>
+    //eh
+
 
     <!-- Swiper XML Str-->
     <string name="settingsButtonLabel">⚙️</string>
     <string name="homeButtonLabel">🏠</string>
     <string name="favoritesButtonLabel">❤️</string>
+    <string name="like">👍</string>
+    <string name="dislike">👎</string>
+    <string name="likesanddislikes">❤️</string>
+    <string name="home">🏠</string>
+    <string name="results">📊️</string>
 
 </resources>
