@@ -8,8 +8,8 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
-import android.widget.Toast;
 
+import com.google.android.gms.common.util.ArrayUtils;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -17,11 +17,8 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.jayway.jsonpath.JsonPath;
 
-import org.w3c.dom.Text;
-
 import java.io.IOException;
 import java.io.InputStream;
-import java.text.ParseException;
 import java.util.HashMap;
 
 public class SwiperIngredientOnly extends AppCompatActivity {
@@ -59,6 +56,11 @@ public class SwiperIngredientOnly extends AppCompatActivity {
                 }
                 User recommendUser = Controller.getUser(Checklist1Activity.getSharedPreferences(), Checklist2Activity.getSharedpreferences());
                 Ingredient topIngredient = s.getRecommendation(recommendUser).get(0);
+                for(Ingredient ing: s.getRecommendation(recommendUser)){
+                    if(ArrayUtils.contains(Controller.firebaseIngredientIds, " ")){
+                        break;
+                    }
+                }
                 InputStream is = getResources().openRawResource(R.raw.all_ingredients_numbered);
                 Object recommendation_text;
                 try {
