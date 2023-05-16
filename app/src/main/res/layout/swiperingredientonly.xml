@@ -24,7 +24,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="📊️"
+            android:text="@string/results"
             android:textSize="30sp"/>
 
         <!-- Home button -->
@@ -33,7 +33,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="🏠"
+            android:text="@string/home"
             android:textSize="30sp"/>
 
         <!-- Favorites button -->
@@ -42,7 +42,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="❤️"
+            android:text="@string/likesanddislikes"
             android:textSize="30sp"/>
     </LinearLayout>
 
@@ -71,7 +71,7 @@
             android:layout_marginTop="500dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="👍"
+            android:text="@string/like"
             android:textSize="20sp"
             android:backgroundTint="#77bd68"
             />
@@ -82,7 +82,7 @@
             android:layout_marginTop="500dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="👎"
+            android:text="@string/dislike"
             android:textSize="20sp"
             android:backgroundTint="#d16a5c"
             />

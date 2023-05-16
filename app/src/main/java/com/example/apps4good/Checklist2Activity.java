@@ -53,4 +53,11 @@ public class Checklist2Activity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void startSwiper(View v){
+        updateSharedPreferences();
+        Intent intent = new Intent(this, SwiperActivity.class);
+        startActivity(intent);
+
+    }
+
 }
