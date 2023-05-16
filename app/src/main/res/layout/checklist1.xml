@@ -101,6 +101,22 @@
                 android:text="@string/kiwi"
                 android:textColor="@color/Denim" />
 
+            <CheckBox
+                android:id="@+id/lemonjuice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/Denim"
+                android:text="@string/lemonjuice"
+                android:textColor="@color/Denim" />
+
+            <CheckBox
+                android:id="@+id/limejuice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/Denim"
+                android:text="@string/limejuice"
+                android:textColor="@color/Denim" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -204,6 +220,14 @@
                 android:layout_height="wrap_content"
                 android:buttonTint="@color/Denim"
                 android:text="@string/mushroom"
+                android:textColor="@color/Denim" />
+
+            <CheckBox
+                android:id="@+id/celery"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/Denim"
+                android:text="@string/celery"
                 android:textColor="@color/Denim" />
 
             <TextView
@@ -328,11 +352,35 @@
                 android:textColor="@color/Denim" />
 
             <CheckBox
+                android:id="@+id/cheddarcheese"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/Denim"
+                android:text="@string/cheddarcheese"
+                android:textColor="@color/Denim" />
+
+            <CheckBox
                 android:id="@+id/yogurt"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:buttonTint="@color/Denim"
                 android:text="@string/yogurt"
+                android:textColor="@color/Denim" />
+
+            <CheckBox
+                android:id="@+id/cottagecheese"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/Denim"
+                android:text="@string/cottagecheese"
+                android:textColor="@color/Denim" />
+
+            <CheckBox
+                android:id="@+id/heavycream"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/Denim"
+                android:text="@string/heavycream"
                 android:textColor="@color/Denim" />
 
             <TextView
@@ -464,6 +512,111 @@
                 android:layout_height="wrap_content"
                 android:buttonTint="@color/Denim"
                 android:text="@string/whitebread"
+                android:textColor="@color/Denim" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="serif"
+                android:padding="10dp"
+                android:text="@string/other"
+                android:textColor="#000000"
+                android:textSize="20sp" />
+
+            <CheckBox
+                android:id="@+id/sugar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/Denim"
+                android:text="@string/sugar"
+                android:textColor="@color/Denim" />
+
+            <CheckBox
+                android:id="@+id/brownsugar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/Denim"
+                android:text="@string/brownsugar"
+                android:textColor="@color/Denim" />
+
+            <CheckBox
+                android:id="@+id/salt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/Denim"
+                android:text="@string/salt"
+                android:textColor="@color/Denim" />
+
+            <CheckBox
+                android:id="@+id/pepper"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/Denim"
+                android:text="@string/pepper"
+                android:textColor="@color/Denim" />
+
+            <CheckBox
+                android:id="@+id/cayennepepper"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/Denim"
+                android:text="@string/cayennepepper"
+                android:textColor="@color/Denim" />
+
+            <CheckBox
+                android:id="@+id/vanilla"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/Denim"
+                android:text="@string/vanilla"
+                android:textColor="@color/Denim" />
+
+            <CheckBox
+                android:id="@+id/flour"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/Denim"
+                android:text="@string/flour"
+                android:textColor="@color/Denim" />
+
+            <CheckBox
+                android:id="@+id/water"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/Denim"
+                android:text="@string/water"
+                android:textColor="@color/Denim" />
+
+            <CheckBox
+                android:id="@+id/garlic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/Denim"
+                android:text="@string/garlicclove"
+                android:textColor="@color/Denim" />
+
+            <CheckBox
+                android:id="@+id/oliveoil"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/Denim"
+                android:text="@string/oliveoil"
+                android:textColor="@color/Denim" />
+
+            <CheckBox
+                android:id="@+id/mayo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/Denim"
+                android:text="@string/mayo"
+                android:textColor="@color/Denim" />
+
+            <CheckBox
+                android:id="@+id/pecans"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/Denim"
+                android:text="@string/pecans"
                 android:textColor="@color/Denim" />
 
             <Button

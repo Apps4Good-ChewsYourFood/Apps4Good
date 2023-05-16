@@ -12,7 +12,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.CheckBox;
-
+import android.widget.CompoundButton;
 import java.util.Arrays;
 
 public class Checklist2Activity extends AppCompatActivity {

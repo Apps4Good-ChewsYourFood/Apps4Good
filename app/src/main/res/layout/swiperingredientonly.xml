@@ -38,13 +38,20 @@
             android:textSize="30sp" />
 
         <!-- Favorites button -->
+        <Button
+            android:id="@+id/favorites_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="🏠"
+            android:textSize="30sp"/>
     </LinearLayout>
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="602dp"
         android:layout_above="@+id/bottom_bar"
-        android:layout_marginBottom="40dp">
+        android:layout_marginBottom="40dp" >
 
 
         <TextView
