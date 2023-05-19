@@ -7,7 +7,6 @@ import java.util.ArrayList;
  * certain recipe in an ArrayList and instructions on how to make the Recipe
  *
  * @author Venkat
- *
  */
 public class Recipe {
     // Data
@@ -16,12 +15,13 @@ public class Recipe {
     private ArrayList<Ingredient> ingredients;
 
     // Constructor
+
     /**
      * Default constructor. Constructs a Recipe object and creates an ArrayList to
      * store Ingredient objects
      */
 
-    public Recipe(){
+    public Recipe() {
         this.name = "";
         this.instructions = "";
         this.ingredients = new ArrayList<Ingredient>();
@@ -29,6 +29,7 @@ public class Recipe {
 
     /**
      * Constructs a recipe object with a name
+     *
      * @param name the name of the recipe
      */
     public Recipe(String name) {
@@ -40,7 +41,8 @@ public class Recipe {
     /**
      * Constructor. Constructs a Recipe object with a specified name and instructions
      * creates an ArrayList to store Ingredient objects
-     * @param name the name of the recipe
+     *
+     * @param name         the name of the recipe
      * @param instructions instructions on how to make the recipe
      */
     public Recipe(String name, String instructions) {
@@ -62,7 +64,8 @@ public class Recipe {
     /**
      * Adds each ingredient (separated with a specified delimiter) to
      * the Recipe
-     * @param input with the names of ingredients separated by the delimiter
+     *
+     * @param input     with the names of ingredients separated by the delimiter
      * @param delimiter the String used to split the ingredients
      */
     public void addIngredients(String input, String delimiter) {
@@ -114,10 +117,10 @@ public class Recipe {
      * @param - an ArrayList of Ingredients to set as the ingredients of the receipe
      */
     public void setIngredients(ArrayList<Ingredient> ingredients) {
-		this.ingredients = ingredients;
+        this.ingredients = ingredients;
     }
 
-     /*
+    /*
      * Gets the Ingredient at the specified index
      *
      * @param index - the index of Ingredient in the ingredients ArrayList

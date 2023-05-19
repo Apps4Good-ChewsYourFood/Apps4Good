@@ -17,7 +17,6 @@ import Jama.SingularValueDecomposition;
  * and dislikes.
  *
  * @author Venkat
- *
  */
 public class SubDatabase {
     // Data
@@ -28,6 +27,7 @@ public class SubDatabase {
     private ArrayList<Ingredient> ingredients;
 
     // Constructors
+
     /**
      * Default constructor. Initializes two ArrayLists, one of recipes, and one of
      * ingredients.
@@ -39,6 +39,7 @@ public class SubDatabase {
     }
 
     // Methods
+
     /**
      * Adds a recipe to the SubDatabase
      *
@@ -49,7 +50,7 @@ public class SubDatabase {
             for (Ingredient i : newRecipe.getIngredients()) {
                 if (!ingredients.contains(i)) {
                     ingredients.add(i);
-                } else if (!sharedIngredients.contains(i)){
+                } else if (!sharedIngredients.contains(i)) {
                     sharedIngredients.add(i);
                 }
             }
@@ -130,7 +131,7 @@ public class SubDatabase {
      *
      * @param user whose likes and dislikes are being analyzed
      * @return an ArrayList sorted by how much the user likes each ingredient. null
-     *         if the user does not have any likes or dislikes
+     * if the user does not have any likes or dislikes
      */
     public ArrayList<Ingredient> getRecommendation(User user) {
         return getRecommendation(user, getIngredients().size() - 1);
@@ -148,8 +149,8 @@ public class SubDatabase {
      *                         0 (inclusive) and the number of ingredients
      *                         (exclusive)
      * @return an ArrayList sorted by how much the user likes each ingredient.
-     *         returns null if the user does not have any likes or dislikes or if
-     *         the valuesToConsider is invalid
+     * returns null if the user does not have any likes or dislikes or if
+     * the valuesToConsider is invalid
      */
     public ArrayList<Ingredient> getRecommendation(User user, int valuesToConsider) {
         // Checking if the parameters are invalid.
@@ -170,7 +171,7 @@ public class SubDatabase {
         for (int i = 0; i < ingredients.size(); i++) {
             try {
                 Boolean like = preferences.get(Integer.parseInt(ingredients.get(i).getName()));
-                if(like != null){
+                if (like != null) {
                     //Log.v("Work, SubDatabase", preferences.get(Integer.parseInt(ingredients.get(i).getName())) + " " + ingredients.get(i) + " in getRecommendation");
                     Log.v("Work, SubDatabase", ingredients.get(i).getName() + " preference interpreted");
                 }
@@ -193,8 +194,7 @@ public class SubDatabase {
         //vTrimmed.print(0, 4);
         // The userRecommendation contains a projected score for how much a suer would
         // like or dislike every ingredient.
-        double[] tempRecommendationStorage = preferencesMatrix.times(vTrimmed).times(vTrimmed.transpose())
-                .getArray()[0];
+        double[] tempRecommendationStorage = preferencesMatrix.times(vTrimmed).times(vTrimmed.transpose()).getArray()[0];
 
         // Order the ingredients from highest to lowest score from the SVD.
         ArrayList<Ingredient> userRecommendation = new ArrayList<Ingredient>();
@@ -211,9 +211,9 @@ public class SubDatabase {
      */
     @Override
     public String toString() {
-        String output = "Ingredients\n" + ingredients + "\nShared Ingredients: " + sharedIngredients +"\n\nRecipes:";
+        String output = "Ingredients\n" + ingredients + "\nShared Ingredients: " + sharedIngredients + "\n\nRecipes:";
         //for (int i = 0; i < getRecipes().size(); i++) {
-            //output += "\n" + getRecipes().get(i);
+        //output += "\n" + getRecipes().get(i);
         //}
         return output;
     }
@@ -229,7 +229,7 @@ public class SubDatabase {
      * @param setToNegInf if true, the greatest value in the array will be replaced
      *                    with Double.NEGATIVE_INFINITY
      * @return the Ingredient corresponding to the maximum value. If all values in
-     *         the input array are Double.NEGATIVE_INFINITY, it will return null
+     * the input array are Double.NEGATIVE_INFINITY, it will return null
      */
     private Ingredient getMaxIngredient(double[] array, boolean setToNegInf) {
         int index = -1;

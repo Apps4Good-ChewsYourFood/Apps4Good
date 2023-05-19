@@ -1,27 +1,18 @@
 package com.example.apps4good;
 
 
-import android.content.Context;
 import android.content.SharedPreferences;
-import android.util.Log;
 
 import androidx.annotation.NonNull;
 
-import com.google.firebase.FirebaseError;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-import com.google.firebase.ktx.Firebase;
-
-import java.util.ArrayList;
-import java.util.Arrays;
-
-import Jama.Matrix;
 
 public class TestFirebaseWithSVD {
-    public static void test(){
+    public static void test() {
         Recipe e543 = new Recipe("e543");
         e543.addIngredient(new Ingredient("e"));
         e543.addIngredient(new Ingredient("5"));
@@ -40,7 +31,7 @@ public class TestFirebaseWithSVD {
         myRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-                for(DataSnapshot ds: snapshot.getChildren()){
+                for (DataSnapshot ds : snapshot.getChildren()) {
                     Recipe r = ds.getValue(Recipe.class);
                     test.addRecipe(r);
                 }
@@ -55,7 +46,8 @@ public class TestFirebaseWithSVD {
         });
 
     }
-    public static void sharedPreferencesTest(SharedPreferences sharedPreferences){
+
+    public static void sharedPreferencesTest(SharedPreferences sharedPreferences) {
         //Log.v("TestFirebaseWithSVD", sharedPreferences.getBoolean("oranges", false) + "");
     }
 }

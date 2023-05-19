@@ -1,7 +1,4 @@
 package com.example.apps4good;
-import android.util.Log;
-
-import java.util.HashMap;
 
 import java.util.HashMap;
 
@@ -17,9 +14,9 @@ public class User {
     // Constructor
 
     /**
-     * The default constructor creates a HashMap that uses an Ingredient Object as
-     * the key, and the user's preference about that ingredient as the value. True =
-     * the user likes that ingredient; false = the user does not like that
+     * The default constructor creates a HashMap that uses an Integer Object as
+     * the key, based on their FireBaseID, and the user's preference about that ingredient as the
+     * value. True if the user likes that ingredient; false if the user does not like that
      * ingredient.
      */
     public User() {
@@ -37,9 +34,9 @@ public class User {
      *               ingredient.
      */
     public void addPreference(Ingredient name, boolean choice) {
-        try{
+        try {
             preferences.put(Integer.parseInt(name.getName()), choice);
-        } catch (NumberFormatException e){
+        } catch (NumberFormatException e) {
             //Log.v("User", name.toString());
         }
     }
@@ -58,12 +55,11 @@ public class User {
          */
         for (Object name : preferences.keySet()) {
             String key = name.toString();
-            String value = preferences.get(name).toString();
-            text += "Ingredient: " + key + " You like to eat this ingredient: " + value + "\n";}
-        if (text.isEmpty())
-            return "You have not made any choices yet :(";
-        else
-            return text;
+            String value = preferences.get(Integer.parseInt(name.toString())).toString();
+            text += "Ingredient: " + key + " You like to eat this ingredient: " + value + "\n";
+        }
+        if (text.isEmpty()) return "You have not made any choices yet :(";
+        else return text;
     }
 
     /**
